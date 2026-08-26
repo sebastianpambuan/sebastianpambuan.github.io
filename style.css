@@ -9,21 +9,16 @@
   --bg-primary: #06050c;
   --bg-secondary: #0d0a16;
   --bg-card: #151021;
-
   --primary: #00ff9c;
   --primary-dark: #00b873;
   --accent: #d600ff;
-
   --text-primary: #f5fff9;
   --text-secondary: #9891a8;
-
   --border: #34204a;
   --glow: rgba(0, 255, 156, 0.2);
-
   --success: #00ff9c;
   --warning: #ffd000;
   --danger: #ff1768;
-
   --white: #ffffff;
   --black: #000000;
 }
@@ -165,17 +160,49 @@ h3 {
 .section-muted {
   background: var(--bg-primary);
 }
-.split-layout {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) 1.2fr;
-  gap: 80px;
+.profile-image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 2px;
+  background: var(--primary);
+  clip-path: polygon(
+    22px 0,
+    100% 0,
+    100% calc(100% - 22px),
+    calc(100% - 22px) 100%,
+    0 100%,
+    0 22px
+  );
+  box-shadow: 0 0 20px var(--glow);
 }
-.section-copy {
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(
+    21px 0,
+    100% 0,
+    100% calc(100% - 21px),
+    calc(100% - 21px) 100%,
+    0 100%,
+    0 21px
+  );
+}
+.about-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 42px;
+}
+.about-description {
   color: var(--text-secondary);
-  max-width: 620px;
+  max-width: 650px;
   font-size: 1.05rem;
 }
-.section-copy p + p {
+.about-description p + p {
   margin-top: 18px;
 }
 .project-grid {
@@ -201,7 +228,7 @@ h3 {
 }
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   list-style: none;
   border-top: 1px solid var(--border);
@@ -281,7 +308,7 @@ h3 {
   .section {
     padding: 75px 0;
   }
-  .split-layout,
+  .about-grid,
   .project-grid,
   .footer-grid {
     grid-template-columns: 1fr;
