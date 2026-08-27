@@ -4,62 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <meta name="description" content="Portfolio template for Sebastian Pambuan">
+    <link rel="stylesheet" href="style.css">
     <title>Sebastian Pambuan | Portfolio</title>
 </head>
 
 <body id="top">
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a class="logo" href="#top" aria-label="Sebastian Pambuan home">SP<span>.</span></a>
-            <nav aria-label="Main navigation">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
+    <header>
+        <div class="header-wrapper">
+            <a href="#top" class="logo">SP<span>.</span></a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- hero section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container hero-content">
-                <p class="eyebrow">My Website Portfolio</p>
+        <section id="hero">
+            <div class="hero-wrapper">
+                <p class="console">My Website Portfolio</p>
                 <h1 id="hero-title">Hello, I am <span>Sebastian.</span></h1>
-                <p class="hero-text">IT graduate passionate about building web applications, solving problems, and
+                <p class="hero-text">IT graduate passionate about building web applications, solving problems,
+                    and
                     growing as a software developer.</p>
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#projects">View my work</a>
-                    <a class="button button-secondary" href="#contact">Get in touch</a>
+                <div class="hero-buttons">
+                    <a href="#projects">View my work ↓</a>
+                    <a href="#contact">Get in touch</a>
                 </div>
             </div>
         </section>
 
         <!-- about section -->
-        <section class="section section-muted" id="about" aria-labelledby="about-title">
-            <div class="container">
-                <div>
-                    <p class="eyebrow">01 / Profile</p>
-                    <h2 id="about-title">About me</h2>
-                </div>
+        <section id="about">
+            <div class="about-wrapper">
+                <p class="console">01 / Profile</p>
+                <h2 id="about-title">A little about me</h2>
                 <div class="about-grid">
-                    <div class="about-profile">
-                        <figure class="profile-image"><img src="images/profile.jpg" height=400 width=400
-                                alt="Profile image of Sebastian Pambuan">
-                        </figure>
-                    </div>
+                    <figure class="about-profile"><img src="images/profile.jpg" width="300"
+                            alt="Profile image of Sebastian Pambuan">
+                    </figure>
                     <div class="about-description">
-                        <p>Hi, I’m Sebastian B. Pambuan, a newly graduated Information Technology professional with
+                        <p class="about-text">Hi, I’m Sebastian B. Pambuan, a newly graduated Information Technology professional with
                             hands-on experience as a Full Stack Developer Intern. I enjoy building web applications,
-                            solving
-                            technical problems, and exploring new technologies. During my internship, I gained practical
-                            experience working with PHP, CodeIgniter, MySQL, JavaScript, HTML, and CSS while helping
-                            develop
-                            and maintain business systems.</p>
-                        <p>I’m now looking for an opportunity where I can apply what I’ve learned in a professional
+                            solving technical problems, and exploring new technologies. During my internship, I gained
+                            practical experience working with PHP, CodeIgniter, MySQL, JavaScript, HTML, and CSS while
+                            helping develop and maintain business systems.</p>
+                        <p class="about-text">I’m now looking for an opportunity where I can apply what I’ve learned in a professional
                             environment while continuing to improve my skills. My goal is to grow as a developer,
                             take on new challenges, and contribute to projects that create meaningful and practical
                             solutions.</p>
@@ -69,11 +66,11 @@
         </section>
 
         <!-- skills section -->
-        <section class="section" id="skills" aria-labelledby="skills-title">
-            <div class="container">
-                <p class="eyebrow">02 / Toolkit</p>
+        <section id="skills">
+            <div class="skills-wrapper">
+                <p class="console">02 / Toolkit</p>
                 <h2 id="skills-title">Skills &amp; tools</h2>
-                <ul class="skills-list" aria-label="Skills and tools">
+                <ul class="skills-list">
                     <li>HTML &amp; CSS</li>
                     <li>JavaScript</li>
                     <li>PHP</li>
@@ -91,59 +88,104 @@
         </section>
 
         <!-- projects section -->
-        <section class="section section-muted" id="projects" aria-labelledby="projects-title">
-            <div class="container">
-                <p class="eyebrow">03 / Selected work</p>
+        <section id="projects">
+            <div class="projects-wrapper">
+                <p class="console">03 / Selected work</p>
                 <h2 id="projects-title">Projects</h2>
-                <div class="project-grid">
-                    <article class="project-card">
-                        <p class="project-number">01</p>
+                <div class="projects-grid">
+                    <article>
+                        <p>01</p>
                         <h3>DEVELOPMENT OF A SMART PLASTIC BOTTLE DISPOSAL SYSTEM WITH PHONE CHARGING REWARDS FOR CITY
                             OF MALABON UNIVERSITY</h3>
                         <p>This capstone project aims to develop a smart plastic bottle disposal system that
-                            incentivizes users to dispose of their bottles properly by offering phone charging rewards. This project used arduino and iot devices to detect bottle
-                        </p>
+                            incentivizes users to dispose of their bottles properly by offering phone charging rewards.
+                            The system is designed to promote environmental sustainability and encourage responsible
+                            waste management practices among the community.</p>
+                        <a href="https://github.com/sebastianpambuan/smartPlasticBottleDisposalSystemWithPhoneChargingReward"
+                            target="_blank" rel="noreferrer">View Project →</a>
+                    </article>
+                    <article>
+                        <p>02</p>
+                        <h3>LOST AND FOUND SYSTEM</h3>
+                        <p>My personal project that was not approved / was discarded while in my studies and now I am
+                            continuing to develop it.</p>
+                        <a href="https://github.com/sebastianpambuan/lost-and-found-system" target="_blank"
+                            rel="noreferrer">View Project →</a>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- Experience section -->
-        <section class="section" id="experience" aria-labelledby="experience-title">
-            <div class="container">
-                <div>
-                    <p class="eyebrow">04 / Experience</p>
-                    <h2 id="experience-title">Work Experience</h2>
-                </div>
-                <div class="experience-description">
+        <section id="experience">
+            <div class="experience-wrapper">
+                <p class="console">04 / Experience</p>
+                <h2 id="experience-title">Work Experience</h2>
+                <article>
+                    <h3>Trasnfer It!</h3>
+                    <h3>Full Stack Developer Intern (MIS Department)</h3>
+                    <ul>
+                        <li>
+                            <p class="experience-text">Developed and customized ERP system modules using PHP, CodeIgniter 3, JavaScript, HTML,
+                                CSS, and
+                                MySQL, implementing requested features and system changes to support business
+                                operations.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="experience-text">
+                                Modified and optimized database structures, SQL queries, reports, user interfaces, and
+                                back-end
+                                functions, improving system functionality and aligning applications with business
+                                requirements.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="experience-text">
+                                Tested, debugged, deployed, and maintained web-based applications through cPanel,
+                                resolving
+                                system issues and ensuring reliable delivery of requested enhancements.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="experience-text">
+                                Collaborated with team members and end users to understand requirements, implement
+                                requested
+                                system changes, and document updates to support ongoing system maintenance and
+                                development.
+                            </p>
+                        </li>
+                    </ul>
 
-                </div>
+
+
+
+                </article>
             </div>
         </section>
 
         <!-- contact section -->
-        <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-            <div class="container contact-content">
-                <p class="eyebrow">05 / Contact</p>
+        <section id="contact">
+            <div class="contact-wrapper">
+                <p class="console">05 / Contact</p>
                 <h2 id="contact-title">Let’s work together.</h2>
-                <p>Have a project in mind or just want to say hello? Add your preferred contact details here.</p><a
-                    class="button button-primary" href="mailto:your.email@example.com">your.email@example.com <span
-                        aria-hidden="true">↗</span></a>
+                <p class="contact-text">Have a project in mind or just want to say hello? Add your preferred contact details here.</p><a
+                    href="mailto:your.email@example.com">your.email@example.com <span aria-hidden="true">↗</span></a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div><a class="logo" href="#top">SP<span>.</span></a>
+    <footer>
+        <div>
+            <div><a href="#top">SP<span>.</span></a>
                 <p>Building, learning, and sharing along the way.</p>
             </div>
-            <div class="footer-links"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <div><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="mailto:your.email@example.com">Email</a>
             </div>
-            <a class="back-to-top" href="#top">Back to top ^</a>
+            <a href="#top">Back to top ↑</a>
         </div>
-        <div class="container copyright">
+        <div>
             <p>&copy; <span id="current-year">yyyy</span> Sebastian Pambuan. All rights reserved.</p>
             <p>Portfolio template</p>
         </div>
