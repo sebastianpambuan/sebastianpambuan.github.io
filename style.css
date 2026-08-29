@@ -444,6 +444,118 @@ section h2::after {
   line-height: 1.9;
 }
 
+/* contact section */
+
+/* footer */
+
+footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 60px 0;
+}
+
+.footer-wrapper {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  position: relative;
+  color: var(--text-secondary);
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a::before {
+  content: "//";
+  margin-right: 6px;
+  color: var(--primary-dark);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background: var(--primary);
+  transition: width 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-backtop {
+  position: relative;
+  color: var(--text-secondary);
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 2px;
+}
+
+.footer-backtop:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.footer-description {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-description .footer-text {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
 /* responsive control */
 
 /* tablet */
