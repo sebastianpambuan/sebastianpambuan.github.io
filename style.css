@@ -455,13 +455,9 @@ section h2::after {
 
 /* contact section */
 
-.contact-wrapper {
-  max-width: 900px;
-}
-
 .contact-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
   align-items: start;
   padding-top: 10px;
@@ -483,9 +479,11 @@ section h2::after {
 .contact-list li a {
   position: relative;
   min-height: 76px;
-  padding: 22px 18px 18px;
+  padding: 16px 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-primary);
@@ -497,15 +495,6 @@ section h2::after {
     color 0.2s ease,
     border-color 0.2s ease,
     transform 0.2s ease;
-}
-
-.contact-list li a::before {
-  content: ">_";
-  position: absolute;
-  top: 10px;
-  left: 18px;
-  color: var(--primary);
-  font-size: 0.65rem;
 }
 
 .contact-list li a:hover {
@@ -625,6 +614,12 @@ footer {
 
 /* responsive control */
 
+@media (max-width: 1060px) {
+  .contact-card {
+    grid-template-columns: 1fr 3fr;
+}
+}
+
 /* tablet */
 
 @media (max-width: 770px) {
@@ -692,7 +687,7 @@ footer {
   }
 
   .contact-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 35px;
   }
 
@@ -708,6 +703,11 @@ footer {
 
   .footer-description {
     justify-content: flex-start;
+  }
+}
+@media (max-width: 510px) {
+  .contact-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
