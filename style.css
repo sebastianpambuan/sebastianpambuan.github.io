@@ -123,13 +123,14 @@ header {
 
 .navbar a {
   position: relative;
+  padding: 12px;
   color: var(--text-secondary);
   font-family: "Courier New", monospace;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .navbar a::before {
@@ -144,7 +145,7 @@ header {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: 1px;
   width: 0;
   height: 1px;
   background: var(--primary);
@@ -250,10 +251,7 @@ section h2::after {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease,
-    background 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .hero-buttons a:first-child {
@@ -318,6 +316,25 @@ section h2::after {
   margin-bottom: 20px;
 }
 
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.about-link:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
 /* skills section */
 
 .skills-list {
@@ -369,10 +386,15 @@ section h2::after {
   gap: 12px;
 }
 
-.projects-list > article {
+.project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 22px 18px 18px;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 20px var(--border);
 }
 
 .project-title {
@@ -398,10 +420,7 @@ section h2::after {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease,
-    background 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .project-link:hover {
@@ -411,25 +430,15 @@ section h2::after {
 
 /* experience section */
 
-.experience-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.experience-list > article {
+.experience-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 22px 18px 18px;
+  transition: all 0.2s ease;
 }
 
-.experience-role {
-  color: var(--primary);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
+.experience-card:hover {
+  box-shadow: 0 0 20px var(--border);
 }
 
 .experience-description {
@@ -445,6 +454,66 @@ section h2::after {
 }
 
 /* contact section */
+
+.contact-wrapper {
+  max-width: 900px;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  padding-top: 10px;
+}
+
+.contact-text {
+  max-width: 460px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-list li a {
+  position: relative;
+  min-height: 76px;
+  padding: 22px 18px 18px;
+  display: flex;
+  align-items: flex-end;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.35;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-list li a::before {
+  content: ">_";
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  color: var(--primary);
+  font-size: 0.65rem;
+}
+
+.contact-list li a:hover {
+  cursor: pointer;
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
 
 /* footer */
 
@@ -486,7 +555,7 @@ footer {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .footer-links a::before {
@@ -494,7 +563,7 @@ footer {
   margin-right: 6px;
   color: var(--primary-dark);
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .footer-links a::after {
@@ -528,9 +597,7 @@ footer {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: all 0.2s ease;
   border: 1px solid var(--border);
   padding: 8px 16px;
   border-radius: 2px;
@@ -561,6 +628,40 @@ footer {
 /* tablet */
 
 @media (max-width: 770px) {
+  .header-wrapper {
+    min-height: 64px;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 18px;
+  }
+
+  .navbar a {
+    font-size: 0;
+  }
+
+  .navbar a::before {
+    content: attr(data-label);
+    margin-right: 0;
+    opacity: 1;
+    font-size: 0.72rem;
+    color: var(--primary);
+  }
+
+  .navbar a::after {
+    display: none;
+  }
+
+  main {
+    margin-top: 120px;
+  }
+
   .skills-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -589,17 +690,70 @@ footer {
   .experience-list {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .footer-description {
+    justify-content: flex-start;
+  }
 }
 
 /* phone and down */
 
 @media (max-width: 420px) {
+  .header-wrapper {
+    width: min(1100px, calc(100% - 24px));
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .navbar ul {
+    gap: 10px 14px;
+  }
+
+  .navbar a {
+    font-size: 0;
+    letter-spacing: 0.8px;
+  }
+
+  .navbar a::before {
+    font-size: 0.68rem;
+  }
+
   .skills-list {
     grid-template-columns: 1fr;
   }
+
+  .footer-wrapper {
+    width: min(1200px, calc(100% - 28px));
+  }
+
+  .footer-links {
+    gap: 10px 16px;
+  }
+
+  .footer-backtop {
+    width: fit-content;
+  }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 330px) {
   #hero-title {
     font-size: clamp(2.8rem, 14vw, 4.5rem);
     letter-spacing: -3px;
