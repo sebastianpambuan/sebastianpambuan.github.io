@@ -31,6 +31,7 @@ html {
 }
 
 body {
+  position: relative;
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
@@ -53,10 +54,6 @@ ul {
 }
 
 /* body */
-
-body {
-  position: relative;
-}
 
 body::before {
   content: "";
@@ -169,10 +166,10 @@ header {
 .console {
   color: var(--primary);
   font-family: "Courier New", monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 12px;
 }
 
@@ -386,30 +383,44 @@ section h2::after {
   gap: 12px;
 }
 
-.project-card {
+.project-card,
+.experience-card,
+.education-card,
+.certificate-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 22px 18px 18px;
   transition: all 0.2s ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover,
+.certificate-card:hover {
   box-shadow: 0 0 20px var(--border);
 }
 
-.project-title {
-  margin-bottom: 8px;
+.project-title,
+.education-school,
+.certificate-title {
+  margin-bottom: 4px;
 }
 
-.project-text {
+.project-text,
+.education-text,
+.certificate-text {
   padding: 4px;
   color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.9;
+}
+
+.project-text {
   margin-bottom: 20px;
 }
 
-.project-link {
+.project-link,
+.certificate-link {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -423,23 +434,13 @@ section h2::after {
   transition: all 0.2s ease;
 }
 
-.project-link:hover {
+.project-link:hover,
+.certificate-link:hover {
   color: var(--primary);
   border-color: var(--primary);
 }
 
 /* experience section */
-
-.experience-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 22px 18px 18px;
-  transition: all 0.2s ease;
-}
-
-.experience-card:hover {
-  box-shadow: 0 0 20px var(--border);
-}
 
 .experience-description {
   list-style: outside;
@@ -451,6 +452,22 @@ section h2::after {
   color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.9;
+}
+
+/* education section */
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* certificates section */
+
+.certificates-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
 /* contact section */
@@ -504,6 +521,15 @@ section h2::after {
   transform: translateY(-3px);
 }
 
+.project-card > img,
+.certificate-card > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+
 /* footer */
 
 footer {
@@ -514,13 +540,12 @@ footer {
 
 .footer-wrapper {
   width: min(1200px, calc(100% - 40px));
-  margin: 0 auto;
+  margin: 0 auto 40px;
+  padding-bottom: 40px;
   display: grid;
   grid-template-columns: 1fr auto auto;
   gap: 80px;
   align-items: center;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -580,6 +605,9 @@ footer {
 
 .footer-backtop {
   position: relative;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
   color: var(--text-secondary);
   font-family: "Courier New", monospace;
   font-size: 0.75rem;
@@ -587,9 +615,6 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.2s ease;
-  border: 1px solid var(--border);
-  padding: 8px 16px;
-  border-radius: 2px;
 }
 
 .footer-backtop:hover {
@@ -609,7 +634,6 @@ footer {
 
 .footer-description .footer-text {
   font-size: 0.8rem;
-  margin: 0;
 }
 
 /* responsive control */
@@ -617,7 +641,7 @@ footer {
 @media (max-width: 1060px) {
   .contact-card {
     grid-template-columns: 1fr 3fr;
-}
+  }
 }
 
 /* tablet */
@@ -678,17 +702,21 @@ footer {
     width: min(280px, 100%);
   }
 
-  .projects-list {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-  .experience-list {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  .projects-list,
+  .experience-list,
+  .education-list,
+  .certificates-list {
+    grid-template-columns: 1fr;
   }
 
   .contact-card {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 35px;
+  }
+
+  .project-card > img,
+  .certificate-card > img {
+    aspect-ratio: 16 / 9;
   }
 
   .footer-wrapper {
@@ -705,9 +733,10 @@ footer {
     justify-content: flex-start;
   }
 }
+
 @media (max-width: 510px) {
   .contact-list {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
@@ -738,6 +767,11 @@ footer {
 
   .skills-list {
     grid-template-columns: 1fr;
+  }
+
+  .project-card > img,
+  .certificate-card > img {
+    aspect-ratio: 16 / 9;
   }
 
   .footer-wrapper {

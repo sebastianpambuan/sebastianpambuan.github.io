@@ -1,226 +1,475 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Sebastian Pambuan | Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-wrapper">
-            <a href="#" class="logo">SP<span>.</span></a>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#about" data-label="01">About</a></li>
-                    <li><a href="#skills" data-label="02">Skills</a></li>
-                    <li><a href="#projects" data-label="03">Projects</a></li>
-                    <li><a href="#experience" data-label="04">Experience</a></li>
-                    <li><a href="#contact" data-label="05">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="header-wrapper">
+        <a href="#" class="logo">SP<span>.</span></a>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#about" data-label="01">About</a></li>
+            <li><a href="#skills" data-label="02">Skills</a></li>
+            <li><a href="#experience" data-label="03">Experience</a></li>
+            <li><a href="#education" data-label="04">Education</a></li>
+            <li><a href="#projects" data-label="05">Projects</a></li>
+            <li><a href="#certificates" data-label="07">Certificates</a></li>
+            <li><a href="#contact" data-label="08">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <!-- hero section -->
-        <section id="hero">
-            <div class="hero-wrapper">
-                <p class="console">My Website Portfolio</p>
-                <h1 id="hero-title">Hello, I am <span>Sebastian.</span></h1>
-                <p class="hero-text">IT graduate passionate about building web applications, solving problems, and
-                    growing as a software developer.</p>
-                <div class="hero-buttons">
-                    <a href="#projects">View my work ↓</a>
-                    <a href="#contact">Get in touch</a>
-                </div>
-            </div>
-        </section>
+      <!-- hero section -->
+      <section id="hero">
+        <div class="hero-wrapper">
+          <p class="console">My Website Portfolio</p>
+          <h1 id="hero-title">Hello, I am <span>Sebastian.</span></h1>
+          <p class="hero-text">
+            IT graduate passionate about building web applications, solving
+            problems, and growing as a software developer.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects">View my work ↓</a>
+            <a href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </section>
 
-        <!-- about section -->
-        <section id="about">
-            <div class="about-wrapper">
-                <p class="console">01 / About</p>
-                <h2 id="about-title">A little about me</h2>
-                <div class="about-grid">
-                    <figure class="about-profile"><img src="images/profile.jpg" width="300"
-                            alt="Profile image of Sebastian Pambuan">
-                    </figure>
-                    <div class="about-description">
-                        <p class="about-text">Hi, I’m Sebastian B. Pambuan, a newly graduated Information Technology
-                            professional with
-                            hands-on experience as a Full Stack Developer Intern. I enjoy building web applications,
-                            solving technical problems, and exploring new technologies. During my internship, I gained
-                            practical experience working with PHP, CodeIgniter, MySQL, JavaScript, HTML, and CSS while
-                            helping develop and maintain business systems.</p>
-                        <p class="about-text">I’m now looking for an opportunity where I can apply what I’ve learned in
-                            a professional
-                            environment while continuing to improve my skills. My goal is to grow as a developer,
-                            take on new challenges, and contribute to projects that create meaningful and practical
-                            solutions.</p>
-                        <a href="#about" class="about-link">Download Resume</a>
-                    </div>
-                </div>
+      <!-- about section -->
+      <section id="about">
+        <div class="about-wrapper">
+          <p class="console">01 / About</p>
+          <h2 id="about-title">A little about me</h2>
+          <div class="about-grid">
+            <figure class="about-profile">
+              <img
+                src="images/profile.jpg"
+                width="300"
+                alt="Profile image of Sebastian Pambuan"
+              />
+            </figure>
+            <div class="about-description">
+              <p class="about-text">
+                Hi, I’m Sebastian B. Pambuan, a newly graduated Information
+                Technology professional with hands-on experience as a Full Stack
+                Developer Intern. I enjoy building web applications, solving
+                technical problems, and exploring new technologies. During my
+                internship, I gained practical experience working with PHP,
+                CodeIgniter, MySQL, JavaScript, HTML, and CSS while helping
+                develop and maintain business systems.
+              </p>
+              <p class="about-text">
+                I’m now looking for an opportunity where I can apply what I’ve
+                learned in a professional environment while continuing to
+                improve my skills. My goal is to grow as a developer, take on
+                new challenges, and contribute to projects that create
+                meaningful and practical solutions.
+              </p>
+              <a href="#about" class="about-link">Download Resume</a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- skills section -->
-        <section id="skills">
-            <div class="skills-wrapper">
-                <p class="console">02 / Skills</p>
-                <h2 id="skills-title">Skills &amp; tools</h2>
-                <ul class="skills-list">
-                    <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noreferrer">HTML</a></li>
-                    <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">CSS</a></li>
-                    <li><a href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer">JavaScript</a></li>
-                    <li><a href="https://www.php.net/" target="_blank" rel="noreferrer">PHP</a></li>
-                    <li><a href="https://www.codeigniter.com/" target="_blank" rel="noreferrer">CodeIgniter 3</a></li>
-                    <li><a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a></li>
-                    <li><a href="https://www.mysql.com/" target="_blank" rel="noreferrer">MySQL &amp; SQL</a></li>
-                    <li><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">MongoDB</a></li>
-                    <li><a href="https://www.python.org/" target="_blank" rel="noreferrer">Python</a></li>
-                    <li><a href="https://www.java.com/en/" target="_blank" rel="noreferrer">Java</a></li>
-                    <li><a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer">C++</a></li>
-                    <li><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></li>
-                    <li><a href="https://git-scm.com/" target="_blank" rel="noreferrer">Git</a></li>
-                    <li><a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">VS Code</a></li>
-                    <li><a href="https://www.cpanel.net/" target="_blank" rel="noreferrer">cPanel</a></li>
-                </ul>
-            </div>
-        </section>
+      <!-- skills section -->
+      <section id="skills">
+        <div class="skills-wrapper">
+          <p class="console">02 / Skills</p>
+          <h2 id="skills-title">Skills &amp; tools</h2>
+          <ul class="skills-list">
+            <li>
+              <a
+                href="https://www.w3schools.com/html/"
+                target="_blank"
+                rel="noreferrer"
+                >HTML</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/"
+                target="_blank"
+                rel="noreferrer"
+                >CSS</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/js/"
+                target="_blank"
+                rel="noreferrer"
+                >JavaScript</a
+              >
+            </li>
+            <li>
+              <a href="https://www.php.net/" target="_blank" rel="noreferrer"
+                >PHP</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.codeigniter.com/"
+                target="_blank"
+                rel="noreferrer"
+                >CodeIgniter 3</a
+              >
+            </li>
+            <li>
+              <a href="https://nodejs.org/en" target="_blank" rel="noreferrer"
+                >Node.js</a
+              >
+            </li>
+            <li>
+              <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"
+                >MySQL &amp; SQL</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.mongodb.com/"
+                target="_blank"
+                rel="noreferrer"
+                >MongoDB</a
+              >
+            </li>
+            <li>
+              <a href="https://www.python.org/" target="_blank" rel="noreferrer"
+                >Python</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.java.com/en/"
+                target="_blank"
+                rel="noreferrer"
+                >Java</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/cpp/"
+                target="_blank"
+                rel="noreferrer"
+                >C++</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/" target="_blank" rel="noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a href="https://git-scm.com/" target="_blank" rel="noreferrer"
+                >Git</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://code.visualstudio.com/"
+                target="_blank"
+                rel="noreferrer"
+                >VS Code</a
+              >
+            </li>
+            <li>
+              <a href="https://www.cpanel.net/" target="_blank" rel="noreferrer"
+                >cPanel</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- projects section -->
-        <section id="projects">
-            <div class="projects-wrapper">
-                <p class="console">03 / Projects</p>
-                <h2 id="projects-title">Selected Works</h2>
-                <div class="projects-list">
-                    <article class="project-card">
-                        <p class="console">01</p>
-                        <h3 class="project-title">DEVELOPMENT OF A SMART PLASTIC BOTTLE DISPOSAL SYSTEM WITH PHONE
-                            CHARGING REWARDS FOR CITY
-                            OF MALABON UNIVERSITY</h3>
-                        <p class="project-text">This capstone project aims to develop a smart plastic bottle disposal
-                            system that
-                            incentivizes users to dispose of their bottles properly by offering phone charging rewards.
-                            The system is designed to promote environmental sustainability and encourage responsible
-                            waste management practices among the community.</p>
-                        <a href="https://github.com/sebastianpambuan/smartPlasticBottleDisposalSystemWithPhoneChargingReward"
-                            target="_blank" rel="noreferrer" class="project-link">View Project →</a>
-                    </article>
-                    <!-- <article class="project-card">
-                        <p class="console">02</p>
-                        <h3 class="project-title">LOST AND FOUND SYSTEM</h3>
-                        <p class="project-text">My personal project that was not approved / was discarded while in my
-                            studies and now I am
-                            continuing to develop it.</p>
-                        <a href="https://github.com/sebastianpambuan/lost-and-found-system" target="_blank"
-                            rel="noreferrer" class="project-link">View Project →</a>
-                    </article> -->
-                </div>
-            </div>
-        </section>
+      <!-- Experience section -->
+      <section id="experience">
+        <div class="experience-wrapper">
+          <p class="console">04 / Experience</p>
+          <h2 id="experience-title">Work Experience</h2>
+          <div class="experience-list">
+            <article class="experience-card">
+              <p class="console">01</p>
+              <h3 class="experience-company">
+                Full Stack Developer Intern (MIS Department)
+              </h3>
+              <h3 class="console">Transfer It! (Manila Office)</h3>
+              <ul class="experience-description">
+                <li>
+                  <p class="experience-text">
+                    Developed and customized ERP modules using PHP, CodeIgniter
+                    3, JavaScript, HTML, CSS, and MySQL.
+                  </p>
+                </li>
+                <li>
+                  <p class="experience-text">
+                    Modified databases, queries, reports, interfaces, and
+                    back-end functions based on requirements.
+                  </p>
+                </li>
+                <li>
+                  <p class="experience-text">
+                    Tested, debugged, deployed, and maintained web applications
+                    through cPanel.
+                  </p>
+                </li>
+                <li>
+                  <p class="experience-text">
+                    Implemented system changes based on team and end-user
+                    requirements.
+                  </p>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- Experience section -->
-        <section id="experience">
-            <div class="experience-wrapper">
-                <p class="console">04 / Experience</p>
-                <h2 id="experience-title">Work Experience</h2>
-                <div class="experience-list">
-                    <article class="experience-card">
-                        <p class="console">01</p>
-                        <h3 class="experience-company">Trasnfer It!</h3>
-                        <h3 class="console">Full Stack Developer Intern (MIS Department)</h3>
-                        <ul class="experience-description">
-                            <li>
-                                <p class="experience-text">
-                                    Developed and customized ERP modules using PHP, CodeIgniter 3, JavaScript, HTML,
-                                    CSS, and MySQL.
-                                </p>
-                            </li>
-                            <li>
-                                <p class="experience-text">
-                                    Modified databases, queries, reports, interfaces, and back-end functions based on
-                                    requirements.
-                                </p>
-                            </li>
-                            <li>
-                                <p class="experience-text">
-                                    Tested, debugged, deployed, and maintained web applications through cPanel.
-                                </p>
-                            </li>
-                            <li>
-                                <p class="experience-text">
-                                    Implemented system changes based on team and end-user requirements.
-                                </p>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
+      <!-- education section -->
+      <section id="education">
+        <div class="experience-wrapper">
+          <p class="console">04 / Education</p>
+          <h2 id="education-title">Education</h2>
+          <div class="education-list">
+            <article class="education-card">
+              <p class="console">04</p>
+              <h3 class="education-school">
+                Bachelor of Science in Information Technology
+              </h3>
+              <h3 class="console">City of Malabon University</h3>
+              <p class="education-text">2022 — 2026</p>
+            </article>
 
-        <!-- contact section -->
-        <section id="contact">
-            <div class="contact-wrapper">
-                <p class="console">05 / Contact</p>
-                <h2 id="contact-title">Let’s work together.</h2>
-                <article class="contact-card">
-                    <p class="contact-text">
-                        I'm currently open to opportunities where I can build, learn, and contribute as a developer or
-                        IT professional.
-                    </p>
-                    <ul class="contact-list">
-                        <li><a href="mailto:sebastianpambuan@gmail.com" target="_blank" rel="noreferrer" class="contact-item"><img
-                                    src="images/icons/mail-text-primary.png"
-                                    data-default="images/icons/mail-text-primary.png"
-                                    data-hover="images/icons/mail-primary.png" width="24"
-                                    alt="Email Icon">sebastianpambuan@gmail.com</a></li>
-                        <li><a href="https://github.com/sebastianpambuan" target="_blank" rel="noreferrer" class="contact-item"><img
-                                    src="images/icons/github-sign-text-primary.png"
-                                    data-default="images/icons/github-sign-text-primary.png"
-                                    data-hover="images/icons/github-sign-primary.png" width="24" alt="Github Icon">/sebastianpambuan</a>
-                        </li>
-                        <li><a href="https://www.facebook.com/sebastian.pambuan.1" target="_blank" rel="noreferrer" class="contact-item"><img
-                                    src="images/icons/facebook-text-primary.png"
-                                    data-default="images/icons/facebook-text-primary.png"
-                                    data-hover="images/icons/facebook-primary.png" width="24" alt="Facebook Icon">/sebastian.pambuan.1</a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/sebastian-pambuan-182789413/" target="_blank"
-                                rel="noreferrer" class="contact-item"><img src="images/icons/linkedin-text-primary.png"
-                                    data-default="images/icons/linkedin-text-primary.png"
-                                    data-hover="images/icons/linkedin-primary.png" width="24" alt="LinkedIn Icon">/sebastian-pambuan-182789413/</a>
-                        </li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+            <article class="education-card">
+              <p class="console">03</p>
+              <h3 class="education-school">STEM Strand</h3>
+              <h3 class="console">Arellano University Jose Rizal Campus</h3>
+              <p class="education-text">2020 — 2022</p>
+            </article>
+
+            <article class="education-card">
+              <p class="console">02</p>
+              <h3 class="education-school">Technical Drawing / Carpentry</h3>
+              <h3 class="console">Concepcion Technical Vocational School</h3>
+              <p class="education-text">2016 — 2020</p>
+            </article>
+
+            <article class="education-card">
+              <p class="console">01</p>
+              <h3 class="education-school">Elementary Education</h3>
+              <h3 class="console">Concepcion Elementary School</h3>
+              <p class="education-text">2010 — 2016</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- projects section -->
+      <section id="projects">
+        <div class="projects-wrapper">
+          <p class="console">03 / Projects</p>
+          <h2 id="projects-title">Selected Works</h2>
+          <div class="projects-list">
+            <article class="project-card">
+              <img
+                src="images/projects/smart-plastic-bottle.jpg"
+                width="600"
+                alt="Smart Plastic Bottle Disposal System project"
+              />
+              <p class="console">01</p>
+              <h3 class="project-title">
+                DEVELOPMENT OF A SMART PLASTIC BOTTLE DISPOSAL SYSTEM WITH PHONE
+                CHARGING REWARDS FOR CITY OF MALABON UNIVERSITY
+              </h3>
+              <p class="project-text">
+                This capstone project aims to develop a smart plastic bottle
+                disposal system that incentivizes users to dispose of their
+                bottles properly by offering phone charging rewards. The system
+                is designed to promote environmental sustainability and
+                encourage responsible waste management practices among the
+                community.
+              </p>
+              <a
+                href="https://github.com/sebastianpambuan/smartPlasticBottleDisposalSystemWithPhoneChargingReward"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link"
+                >View Project →</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- certificates section -->
+      <section id="certificates">
+        <div class="certificates-wrapper">
+          <p class="console">04 / Certificates</p>
+          <h2 id="certificates-title">Achievements</h2>
+          <div class="certificates-list">
+            <article class="certificate-card">
+              <img
+                src="images/certificates/certificate-01.jpg"
+                width="600"
+                alt="[Certificate Name]"
+              />
+              <p class="console">01</p>
+              <h3 class="certificate-title">[Certificate Name]</h3>
+              <p class="certificate-text">[Issuing Organization]</p>
+              <p class="certificate-text">[Date Issued]</p>
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                class="certificate-link"
+                >View Certificate →</a
+              >
+            </article>
+
+            <article class="certificate-card">
+              <img
+                src="images/certificates/certificate-02.jpg"
+                width="600"
+                alt="[Certificate Name]"
+              />
+              <p class="console">02</p>
+              <h3 class="certificate-title">[Certificate Name]</h3>
+              <p class="certificate-text">[Issuing Organization]</p>
+              <p class="certificate-text">[Date Issued]</p>
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                class="certificate-link"
+                >View Certificate →</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section -->
+      <section id="contact">
+        <div class="contact-wrapper">
+          <p class="console">05 / Contact</p>
+          <h2 id="contact-title">Let’s work together.</h2>
+          <article class="contact-card">
+            <p class="contact-text">
+              I'm currently open to opportunities where I can build, learn, and
+              contribute as a developer or IT professional.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <a
+                  href="mailto:sebastianpambuan@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="contact-item"
+                  ><img
+                    src="images/icons/mail-text-primary.png"
+                    data-default="images/icons/mail-text-primary.png"
+                    data-hover="images/icons/mail-primary.png"
+                    width="24"
+                    alt="Email Icon"
+                  />sebastianpambuan@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/sebastianpambuan"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="contact-item"
+                  ><img
+                    src="images/icons/github-sign-text-primary.png"
+                    data-default="images/icons/github-sign-text-primary.png"
+                    data-hover="images/icons/github-sign-primary.png"
+                    width="24"
+                    alt="Github Icon"
+                  />/sebastianpambuan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/sebastian.pambuan.1"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="contact-item"
+                  ><img
+                    src="images/icons/facebook-text-primary.png"
+                    data-default="images/icons/facebook-text-primary.png"
+                    data-hover="images/icons/facebook-primary.png"
+                    width="24"
+                    alt="Facebook Icon"
+                  />/sebastian.pambuan.1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/sebastian-pambuan-182789413/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="contact-item"
+                  ><img
+                    src="images/icons/linkedin-text-primary.png"
+                    data-default="images/icons/linkedin-text-primary.png"
+                    data-hover="images/icons/linkedin-primary.png"
+                    width="24"
+                    alt="LinkedIn Icon"
+                  />/sebastian-pambuan-182789413/</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-wrapper">
-            <div class="footer-title">
-                <a href="#" class="logo">SP<span>.</span></a>
-                <p class="footer-text">Thank you for checking out my portfolio. Hope you are having a nice day.</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/sebastianpambuan" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="https://www.facebook.com/sebastian.pambuan.1" target="_blank" rel="noreferrer">Facebook</a>
-                <a href="https://www.linkedin.com/in/sebastian-pambuan-182789413/" target="_blank"
-                    rel="noreferrer">Linkedin</a>
-            </div>
-            <a href="#" class="footer-backtop">Back to top ↑</a>
+      <div class="footer-wrapper">
+        <div class="footer-title">
+          <a href="#" class="logo">SP<span>.</span></a>
+          <p class="footer-text">
+            Thank you for checking out my portfolio. Hope you are having a nice
+            day.
+          </p>
         </div>
-        <div class="footer-description">
-            <p class="footer-text">&copy; <span id="current-year">yyyy</span> Sebastian B. Pambuan. All rights reserved.
-            </p>
-            <p class="footer-text">My Website Portfolio</p>
+        <div class="footer-links">
+          <a
+            href="https://github.com/sebastianpambuan"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.facebook.com/sebastian.pambuan.1"
+            target="_blank"
+            rel="noreferrer"
+            >Facebook</a
+          >
+          <a
+            href="https://www.linkedin.com/in/sebastian-pambuan-182789413/"
+            target="_blank"
+            rel="noreferrer"
+            >Linkedin</a
+          >
         </div>
+        <a href="#" class="footer-backtop">Back to top ↑</a>
+      </div>
+      <div class="footer-description">
+        <p class="footer-text">
+          &copy; <span id="current-year">yyyy</span> Sebastian B. Pambuan. All
+          rights reserved.
+        </p>
+        <p class="footer-text">My Website Portfolio</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
