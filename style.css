@@ -238,7 +238,7 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 main {
@@ -457,7 +457,7 @@ section h2::after {
 .certificate-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  padding: 22px 18px 18px;
+  padding: 18px 16px 16px;
   transition: all 0.2s ease;
 }
 
@@ -534,8 +534,8 @@ section h2::after {
 
 .certificates-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 /* contact section */
@@ -592,10 +592,17 @@ section h2::after {
 .project-card > img,
 .certificate-card > img {
   width: 100%;
-  aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   border: 1px solid var(--border);
+}
+
+.project-card > img {
+  aspect-ratio: 16 / 9;
+}
+
+.certificate-card > img {
+  aspect-ratio: 1.41 / 1;
 }
 
 /* footer */
@@ -702,6 +709,46 @@ footer {
 
 .footer-description .footer-text {
   font-size: 0.8rem;
+}
+
+/* certificate modal */
+
+.certificate-preview {
+  cursor: pointer;
+}
+
+.certificate-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000000bd;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.certificate-full {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.certificate-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none; 
+  color: white;
+  font-size: 40px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.certificate-close:hover {
+  opacity: 0.7;
 }
 
 /* responsive control */

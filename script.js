@@ -18,22 +18,23 @@ document.querySelectorAll(".mobile-navbar a").forEach((link) => {
   });
 });
 
-const contactLinks = document.querySelectorAll(".contact-list li a");
-
-contactLinks.forEach((link) => {
-  const icon = link.querySelector("img");
-  if (!icon) return;
-
-  const defaultSrc = icon.dataset.default || icon.src;
-  const hoverSrc = icon.dataset.hover || defaultSrc;
-
-  link.addEventListener("mouseenter", () => {
-    icon.src = hoverSrc;
-  });
-
-  link.addEventListener("mouseleave", () => {
-    icon.src = defaultSrc;
-  });
-});
-
 document.getElementById("current-year").textContent = new Date().getFullYear();
+
+function openCertificate(image) {
+  const modal = document.getElementById("certificate-modal");
+  const fullImage = document.getElementById("certificate-full");
+
+  fullImage.src = image.src;
+  fullImage.alt = image.alt;
+
+  modal.style.display = "flex";
+}
+
+function closeCertificate(event) {
+  if (
+    event.target.id === "certificate-modal" ||
+    event.target.classList.contains("certificate-close")
+  ) {
+    document.getElementById("certificate-modal").style.display = "none";
+  }
+}
