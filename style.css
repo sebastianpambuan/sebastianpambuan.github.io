@@ -630,6 +630,60 @@ section h2::after {
     transition: transform 0.3s ease;
 }
 
+/* overview section */
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+#overview figure {
+    position: relative;
+    padding: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+#overview img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+#overview figure:hover {
+    box-shadow: 0 0 20px var(--border);
+    transform: translateY(-3px);
+}
+
+.overview-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.overview-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--border);
+    font-family: "Courier New", monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.overview-link:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
 /* footer */
 
 footer {
