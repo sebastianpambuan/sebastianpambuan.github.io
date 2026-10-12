@@ -248,12 +248,11 @@ main {
 
 section {
     position: relative;
-    width: min(1200px, calc(100% - 50px));
+    width: min(1200px, calc(100% - 80px));
     margin: auto;
     padding: 120px 0;
     opacity: 0;
-    transition:
-        opacity 0.8s ease-out;
+    transition: opacity 0.8s ease-out;
 }
 
 section.show {
@@ -324,6 +323,7 @@ section h2::after {
     min-height: 44px;
     padding: 0 18px;
     border: 1px solid var(--border);
+    background: var(--bg-card);
     font-family: "Courier New", monospace;
     font-size: 0.7rem;
     font-weight: 700;
@@ -341,11 +341,13 @@ section h2::after {
 .hero-buttons a:first-child:hover {
     background: var(--white);
     border-color: var(--white);
+    transform: translateY(-3px);
 }
 
 .hero-buttons a:last-child:hover {
     color: var(--primary);
     border-color: var(--primary);
+    transform: translateY(-3px);
 }
 
 .hero-wrapper::before {
@@ -384,7 +386,8 @@ section h2::after {
 }
 
 #about figure:hover {
-    box-shadow: 0 0 20px var(--border);
+    border-color: var(--primary);
+    transform: translateY(-3px);
 }
 
 .about-text {
@@ -400,6 +403,7 @@ section h2::after {
     min-height: 44px;
     padding: 0 18px;
     border: 1px solid var(--border);
+    background: var(--bg-card);
     font-family: "Courier New", monospace;
     font-size: 0.7rem;
     font-weight: 700;
@@ -411,6 +415,7 @@ section h2::after {
 .about-link:hover {
     color: var(--primary);
     border-color: var(--primary);
+    transform: translateY(-3px);
 }
 
 /* skills section */
@@ -480,7 +485,7 @@ section h2::after {
 .experience-card:hover,
 .education-card:hover,
 .certificate-card:hover {
-    box-shadow: 0 0 20px var(--border);
+    border-color: var(--primary);
     transform: translateY(-3px);
 }
 
@@ -526,6 +531,13 @@ section h2::after {
 }
 
 /* experience section */
+
+.experience-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 24px;
+}
 
 .experience-description {
     list-style: outside;
@@ -689,7 +701,7 @@ section h2::after {
 footer {
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
-    padding: 60px 0;
+    padding: 40px 0 20px 0;
 }
 
 .footer-wrapper {
