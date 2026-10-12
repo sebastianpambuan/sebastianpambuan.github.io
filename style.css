@@ -474,7 +474,8 @@ section h2::after {
 .project-card,
 .experience-card,
 .education-card,
-.certificate-card {
+.certificate-card,
+.system-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     padding: 18px 16px 16px;
@@ -484,7 +485,8 @@ section h2::after {
 .project-card:hover,
 .experience-card:hover,
 .education-card:hover,
-.certificate-card:hover {
+.certificate-card:hover,
+.system-card:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
 }
@@ -498,7 +500,8 @@ section h2::after {
 .skills-text,
 .project-text,
 .education-text,
-.certificate-text {
+.certificate-text,
+.system-text {
     padding: 4px;
     color: var(--text-secondary);
     font-size: 0.95rem;
@@ -666,7 +669,7 @@ section h2::after {
 }
 
 #overview figure:hover {
-    box-shadow: 0 0 20px var(--border);
+    border-color: var(--primary);
     transform: translateY(-3px);
 }
 
@@ -677,23 +680,13 @@ section h2::after {
     margin-bottom: 20px;
 }
 
-.overview-link {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 0 18px;
-    border: 1px solid var(--border);
-    font-family: "Courier New", monospace;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.2s ease;
-}
+/* system section */
 
-.overview-link:hover {
-    color: var(--primary);
-    border-color: var(--primary);
+.system-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 12px;
 }
 
 /* footer */
