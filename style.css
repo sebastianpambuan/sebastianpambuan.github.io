@@ -1098,7 +1098,7 @@ footer {
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 32px;
     }
 
@@ -1106,15 +1106,27 @@ footer {
         width: min(280px, 100%);
     }
 
+    .overview-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 32px;
+    }
+
+    #overview figure {
+        width: min(280px, 100%);
+    }
+
     .projects-list,
     .experience-list,
-    .education-list,
+    .education-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
     .certificates-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .contact-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 35px;
     }
 
@@ -1125,7 +1137,7 @@ footer {
 
     .development-list,
     .result-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
     .development-grid,
@@ -1134,7 +1146,7 @@ footer {
     }
 
     .footer-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 30px;
     }
 
@@ -1153,8 +1165,8 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .contact-list {
-        grid-template-columns: 1fr;
+    .certificates-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
     .header-wrapper {
@@ -1165,6 +1177,10 @@ footer {
 /* mobile */
 
 @media (max-width: 430px) {
+    main {
+        margin-top: 50px;
+    }
+
     .navbar {
         display: none;
     }
@@ -1185,6 +1201,9 @@ footer {
         letter-spacing: -2px;
     }
 
+    .contact-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
     .skills-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1196,7 +1215,7 @@ footer {
 
     .development-grid,
     .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
     .development-card,
@@ -1215,9 +1234,12 @@ footer {
 }
 
 @media (max-width: 330px) {
-    #hero-title {
-        font-size: clamp(2.8rem, 14vw, 4.5rem);
-        letter-spacing: -3px;
+    main {
+        margin-top: 20px;
+    }
+    .hero-title {
+        font-size: clamp(3.2rem, 9vw, 8rem);
+        letter-spacing: -5px;
     }
 
     .hero-text {

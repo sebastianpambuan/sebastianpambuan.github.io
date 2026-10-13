@@ -1,766 +1,489 @@
-<!doctype html>
+<main>
+    <!-- hero section -->
+    <section id="hero">
+        <div class="hero-wrapper capstone-hero">
+            <p class="console">Capstone Project</p>
+            <h1 class="hero-title capstone-hero-title">
+                DEVELOPMENT OF A SMART PLASTIC BOTTLE DISPOSAL SYSTEM WITH PHONE
+                CHARGING REWARDS FOR
+                <span>CITY OF MALABON UNIVERSITY.</span>
+            </h1>
+            <p class="hero-text capstone-hero-text">
+                A smart recycling system designed to encourage proper plastic
+                bottle disposal by providing phone charging rewards to students
+                of City of Malabon University.
+            </p>
+        </div>
+    </section>
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
+    <!-- Overview section -->
+    <section id="overview">
+        <div class="overview-wrapper">
+            <p class="console">01 / Overview</p>
+            <h2 id="overview-title">Project Overview</h2>
 
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0" />
+            <div class="overview-grid">
+                <figure class="overview-profile">
+                    <img
+                        src="images/projects/system_view1.jpg"
+                        width="300"
+                        alt="Smart Plastic Bottle Disposal System prototype" />
+                </figure>
 
-        <link
-            rel="stylesheet"
-            href="capstone-style.css" />
+                <div class="overview-description">
+                    <p class="overview-text">
+                        Plastic bottle waste remains an environmental concern at
+                        the City of Malabon University (CMU), where traditional
+                        waste management practices have struggled to encourage
+                        consistent proper disposal. To address this problem, our
+                        six-member capstone team developed the Smart Plastic
+                        Bottle Disposal System with Phone Charging Rewards, a
+                        technology-based solution designed to encourage
+                        responsible disposal through a practical incentive.
+                    </p>
 
-        <title>Capstone Project | Smart Bottle Disposal System</title>
-    </head>
+                    <p class="overview-text">
+                        The system uses an Arduino UNO, sensors, and a
+                        phone-charging mechanism to automate bottle detection
+                        and provide charging time for valid bottles. It also
+                        records disposal and charging activity for monitoring
+                        through a web-based interface. By combining embedded
+                        hardware, software, and an incentive-based approach, the
+                        project aims to promote environmental awareness and
+                        support more sustainable waste disposal practices within
+                        the university community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <body>
-        <header>
-            <div class="capstone-header-wrapper">
-                <a
-                    href="#"
-                    class="capstone-logo"
-                    >SP<span>.</span></a
-                >
+    <!-- System section -->
+    <section id="system">
+        <div class="system-wrapper">
+            <p class="console">02 / System</p>
+            <h2 id="system-title">How the System Works</h2>
 
-                <button
-                    class="capstone-menu-toggle"
-                    id="capstone-menu-toggle"
-                    aria-label="Open menu">
-                    <span></span>
+            <div class="system-list">
+                <!-- Step 1: Bottle Insertion -->
+                <article class="system-card">
+                    <p class="console">02.1</p>
+                    <h3 class="system-header">Bottle Insertion</h3>
 
-                    <span></span>
+                    <p class="system-text">
+                        The process begins when a user inserts a plastic bottle
+                        into the disposal unit. The system uses an Arduino UNO
+                        microcontroller connected to sensors that detect the
+                        bottle and gather information needed for validation.
+                    </p>
+                </article>
 
-                    <span></span>
-                </button>
+                <!-- Step 2: Bottle Detection and Validation -->
+                <article class="system-card">
+                    <p class="console">02.2</p>
+                    <h3 class="system-header">Detection and Validation</h3>
 
-                <nav class="capstone-navbar">
-                    <ul>
-                        <li>
-                            <a
-                                href="#capstone-about"
-                                data-label="01"
-                                >About</a
-                            >
-                        </li>
+                    <p class="system-text">
+                        The IR sensor, ultrasonic sensor, load cell, and CP
+                        sensor provide readings related to the bottle's
+                        presence, size, weight, and material. The system checks
+                        whether the inserted bottle meets its predefined
+                        requirements. If the bottle is invalid or no bottle is
+                        detected, the user is prompted to try again.
+                    </p>
+                </article>
 
-                        <li>
-                            <a
-                                href="#capstone-objectives"
-                                data-label="02"
-                                >Objectives</a
-                            >
-                        </li>
+                <!-- Step 3: Charging Reward -->
+                <article class="system-card">
+                    <p class="console">02.3</p>
+                    <h3 class="system-header">Phone Charging Reward</h3>
 
-                        <li>
-                            <a
-                                href="#capstone-system"
-                                data-label="03"
-                                >System</a
-                            >
-                        </li>
+                    <p class="system-text">
+                        Once a valid bottle is accepted, the system calculates
+                        the corresponding phone charging time using its
+                        configured reward mechanism. The relay module activates
+                        the charging outlet, allowing the user to receive the
+                        reward for proper bottle disposal.
+                    </p>
+                </article>
 
-                        <li>
-                            <a
-                                href="#capstone-technology"
-                                data-label="04"
-                                >Technology</a
-                            >
-                        </li>
+                <!-- Step 4: Data Recording and Monitoring -->
+                <article class="system-card">
+                    <p class="console">02.4</p>
+                    <h3 class="system-header">Data Recording and Monitoring</h3>
 
-                        <li>
-                            <a
-                                href="#capstone-contribution"
-                                data-label="05"
-                                >My Role</a
-                            >
-                        </li>
+                    <p class="system-text">
+                        Bottle deposits and charging sessions are recorded in
+                        the database for tracking and reporting. The web-based
+                        admin dashboard allows administrators to monitor
+                        disposal records, charging activity, and system
+                        statistics. After the process is completed, the system
+                        resets and is ready for the next user.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-                        <li>
-                            <a
-                                href="#capstone-results"
-                                data-label="06"
-                                >Results</a
-                            >
-                        </li>
+    <!-- Development section -->
+    <section id="development">
+        <div class="development-wrapper">
+            <p class="console">03 / Development</p>
+            <h2 id="development-title">Built Through Collaboration</h2>
 
-                        <li>
-                            <a
-                                href="#capstone-gallery"
-                                data-label="07"
-                                >Gallery</a
-                            >
-                        </li>
+            <p class="development-intro">
+                The project was developed using the Agile Development Model,
+                with hardware, programming, interface design, and testing
+                handled through a collaborative process. Each team member
+                contributed to different parts of the system, from the physical
+                prototype to its software and documentation.
+            </p>
 
-                        <li>
-                            <a
-                                href="#capstone-contact"
-                                data-label="08"
-                                >Contact</a
-                            >
-                        </li>
+            <div class="development-list">
+                <!-- 03.1 Personal Contribution -->
+                <article class="development-card">
+                    <p class="console">03.1 / My Contribution</p>
+                    <h3 class="development-header">
+                        Arduino and Sensor Integration
+                    </h3>
+
+                    <p class="development-text">
+                        My main contribution focused on the system's
+                        Arduino-based hardware. I helped design and assemble the
+                        electronic components, including the Arduino board,
+                        wiring, and sensors. I also developed the embedded logic
+                        for bottle detection and insertion, tested the
+                        hardware's behavior, and worked on integrating the
+                        Arduino with the wider system.
+                    </p>
+
+                    <ul class="development-skills">
+                        <li>Arduino Programming</li>
+                        <li>Sensor Integration</li>
+                        <li>Hardware Assembly</li>
+                        <li>Testing and Debugging</li>
                     </ul>
-                </nav>
+                </article>
+
+                <!-- 03.2 Development Approach -->
+                <article class="development-card">
+                    <p class="console">03.2 / Development Approach</p>
+                    <h3 class="development-header">
+                        Iterative Development and Testing
+                    </h3>
+
+                    <p class="development-text">
+                        The team followed the Agile Development Model, building
+                        the system in stages instead of completing every
+                        component at once. Hardware components, embedded logic,
+                        and software functions were developed and tested
+                        incrementally. This approach helped the team identify
+                        issues, check how components worked together, and make
+                        adjustments throughout development.
+                    </p>
+                </article>
             </div>
 
-            <nav
-                class="capstone-mobile-navbar"
-                id="capstone-mobile-navbar">
-                <button
-                    class="capstone-mobile-navbar-close"
-                    id="capstone-mobile-navbar-close"
-                    aria-label="Close menu">
-                    &times;
-                </button>
-
-                <ul>
-                    <li>
-                        <a href="#capstone-about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="#capstone-objectives">Objectives</a>
-                    </li>
-
-                    <li>
-                        <a href="#capstone-system">System</a>
-                    </li>
-
-                    <li>
-                        <a href="#capstone-technology">Technology</a>
-                    </li>
-
-                    <li>
-                        <a href="#capstone-contribution">My Role</a>
-                    </li>
-
-                    <li>
-                        <a href="#capstone-results">Results</a>
-                    </li>
-
-                    <li>
-                        <a href="#capstone-gallery">Gallery</a>
-                    </li>
-
-                    <li>
-                        <a href="#capstone-contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <!-- hero section -->
-
-            <section id="capstone-hero">
-                <div class="capstone-hero-wrapper">
-                    <p class="capstone-console">Capstone Project</p>
-
-                    <h1 id="capstone-hero-title">
-                        DEVELOPMENT OF A SMART PLASTIC BOTTLE DISPOSAL SYSTEM
-
-                        <span>WITH PHONE CHARGING REWARDS</span>
-                    </h1>
-
-                    <p class="capstone-hero-text">
-                        [PLACEHOLDER] A brief introduction to the capstone
-                        project, what the system does, and the main purpose of
-                        developing the project.
-                    </p>
-
-                    <div class="capstone-hero-buttons">
-                        <a href="#capstone-about"> Explore Project ↓ </a>
-
-                        <a href="#capstone-contact"> Back to Portfolio </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- about section -->
-
-            <section id="capstone-about">
-                <div class="capstone-about-wrapper">
-                    <p class="capstone-console">01 / About</p>
-
-                    <h2 id="capstone-about-title">About the project</h2>
-
-                    <div class="capstone-about-grid">
-                        <figure class="capstone-about-image">
-                            <img
-                                src="images/capstone-project.jpg"
-                                width="300"
-                                alt="Capstone project placeholder image" />
-                        </figure>
-
-                        <div class="capstone-about-description">
-                            <p class="capstone-about-text">
-                                [PLACEHOLDER] Provide a short explanation of the
-                                capstone project.
-                            </p>
-
-                            <p class="capstone-about-text">
-                                [PLACEHOLDER] Explain the problem the project
-                                was created to address and the general idea
-                                behind the proposed solution.
-                            </p>
-
-                            <p class="capstone-about-text">
-                                [PLACEHOLDER] Add any important background
-                                information about the project, school,
-                                community, or intended users.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- objectives section -->
-
-            <section id="capstone-objectives">
-                <div class="capstone-objectives-wrapper">
-                    <p class="capstone-console">02 / Objectives</p>
-
-                    <h2 id="capstone-objectives-title">Project objectives</h2>
-
-                    <p class="capstone-objectives-text">
-                        [PLACEHOLDER] Introduce the main objectives of the
-                        capstone project.
-                    </p>
-
-                    <ul class="capstone-objectives-list">
-                        <li>
-                            <p class="capstone-console">01</p>
-
-                            <h3 class="capstone-objective-title">
-                                [OBJECTIVE TITLE]
-                            </h3>
-
-                            <p class="capstone-objective-text">
-                                [PLACEHOLDER — Describe the first project
-                                objective.]
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class="capstone-console">02</p>
-
-                            <h3 class="capstone-objective-title">
-                                [OBJECTIVE TITLE]
-                            </h3>
-
-                            <p class="capstone-objective-text">
-                                [PLACEHOLDER — Describe the second project
-                                objective.]
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class="capstone-console">03</p>
-
-                            <h3 class="capstone-objective-title">
-                                [OBJECTIVE TITLE]
-                            </h3>
-
-                            <p class="capstone-objective-text">
-                                [PLACEHOLDER — Describe the third project
-                                objective.]
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class="capstone-console">04</p>
-
-                            <h3 class="capstone-objective-title">
-                                [OBJECTIVE TITLE]
-                            </h3>
-
-                            <p class="capstone-objective-text">
-                                [PLACEHOLDER — Describe the fourth project
-                                objective.]
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- system section -->
-
-            <section id="capstone-system">
-                <div class="capstone-system-wrapper">
-                    <p class="capstone-console">03 / System</p>
-
-                    <h2 id="capstone-system-title">How the system works</h2>
-
-                    <p class="capstone-system-text">
-                        [PLACEHOLDER] Explain how the system operates from the
-                        user's interaction with the machine through the final
-                        reward or output.
-                    </p>
-
-                    <div class="capstone-system-flow">
-                        <article class="capstone-system-card">
-                            <p class="capstone-console">01</p>
-
-                            <h3 class="capstone-system-card-title">
-                                [STEP TITLE]
-                            </h3>
-
-                            <p class="capstone-system-card-text">
-                                [PLACEHOLDER]
-                            </p>
-                        </article>
-
-                        <article class="capstone-system-card">
-                            <p class="capstone-console">02</p>
-
-                            <h3 class="capstone-system-card-title">
-                                [STEP TITLE]
-                            </h3>
-
-                            <p class="capstone-system-card-text">
-                                [PLACEHOLDER]
-                            </p>
-                        </article>
-
-                        <article class="capstone-system-card">
-                            <p class="capstone-console">03</p>
-
-                            <h3 class="capstone-system-card-title">
-                                [STEP TITLE]
-                            </h3>
-
-                            <p class="capstone-system-card-text">
-                                [PLACEHOLDER]
-                            </p>
-                        </article>
-
-                        <article class="capstone-system-card">
-                            <p class="capstone-console">04</p>
-
-                            <h3 class="capstone-system-card-title">
-                                [STEP TITLE]
-                            </h3>
-
-                            <p class="capstone-system-card-text">
-                                [PLACEHOLDER]
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- technology section -->
-
-            <section id="capstone-technology">
-                <div class="capstone-technology-wrapper">
-                    <p class="capstone-console">04 / Technology</p>
-
-                    <h2 id="capstone-technology-title">
-                        Technology &amp; components
-                    </h2>
-
-                    <p class="capstone-technology-text">
-                        [PLACEHOLDER] Explain the technologies, programming
-                        languages, hardware, components, and development tools
-                        used in the project.
-                    </p>
-
-                    <ul class="capstone-technology-list">
-                        <li>
-                            <a
-                                href="#"
-                                class="capstone-technology-item">
-                                [TECHNOLOGY / LANGUAGE]
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#"
-                                class="capstone-technology-item">
-                                [MICROCONTROLLER]
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#"
-                                class="capstone-technology-item">
-                                [SENSOR]
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#"
-                                class="capstone-technology-item">
-                                [HARDWARE COMPONENT]
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#"
-                                class="capstone-technology-item">
-                                [SOFTWARE / TOOL]
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#"
-                                class="capstone-technology-item">
-                                [OTHER COMPONENT]
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- contribution section -->
-
-            <section id="capstone-contribution">
-                <div class="capstone-contribution-wrapper">
-                    <p class="capstone-console">05 / My Role</p>
-
-                    <h2 id="capstone-contribution-title">
-                        My role &amp; contributions
-                    </h2>
-
-                    <div class="capstone-contribution-list">
-                        <article class="capstone-contribution-card">
-                            <p class="capstone-console">01</p>
-
-                            <h3 class="capstone-contribution-title">
-                                [CONTRIBUTION TITLE]
-                            </h3>
-
-                            <p class="capstone-contribution-text">
-                                [PLACEHOLDER — Describe your specific
-                                contribution.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-contribution-card">
-                            <p class="capstone-console">02</p>
-
-                            <h3 class="capstone-contribution-title">
-                                [CONTRIBUTION TITLE]
-                            </h3>
-
-                            <p class="capstone-contribution-text">
-                                [PLACEHOLDER — Describe your specific
-                                contribution.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-contribution-card">
-                            <p class="capstone-console">03</p>
-
-                            <h3 class="capstone-contribution-title">
-                                [CONTRIBUTION TITLE]
-                            </h3>
-
-                            <p class="capstone-contribution-text">
-                                [PLACEHOLDER — Describe your specific
-                                contribution.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-contribution-card">
-                            <p class="capstone-console">04</p>
-
-                            <h3 class="capstone-contribution-title">
-                                [CONTRIBUTION TITLE]
-                            </h3>
-
-                            <p class="capstone-contribution-text">
-                                [PLACEHOLDER — Describe your specific
-                                contribution.]
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- results section -->
-
-            <section id="capstone-results">
-                <div class="capstone-results-wrapper">
-                    <p class="capstone-console">06 / Results</p>
-
-                    <h2 id="capstone-results-title">Results &amp; testing</h2>
-
-                    <p class="capstone-results-text">
-                        [PLACEHOLDER] Describe how the system was tested and
-                        summarize the actual results obtained from the testing
-                        process.
-                    </p>
-
-                    <div class="capstone-results-list">
-                        <article class="capstone-result-card">
-                            <p class="capstone-console">RESULT 01</p>
-
-                            <h3 class="capstone-result-title">
-                                [RESULT / METRIC]
-                            </h3>
-
-                            <p class="capstone-result-value">[VALUE]</p>
-
-                            <p class="capstone-result-text">
-                                [PLACEHOLDER — Explain what this result means.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-result-card">
-                            <p class="capstone-console">RESULT 02</p>
-
-                            <h3 class="capstone-result-title">
-                                [RESULT / METRIC]
-                            </h3>
-
-                            <p class="capstone-result-value">[VALUE]</p>
-
-                            <p class="capstone-result-text">
-                                [PLACEHOLDER — Explain what this result means.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-result-card">
-                            <p class="capstone-console">RESULT 03</p>
-
-                            <h3 class="capstone-result-title">
-                                [RESULT / METRIC]
-                            </h3>
-
-                            <p class="capstone-result-value">[VALUE]</p>
-
-                            <p class="capstone-result-text">
-                                [PLACEHOLDER — Explain what this result means.]
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- gallery section -->
-
-            <section id="capstone-gallery">
-                <div class="capstone-gallery-wrapper">
-                    <p class="capstone-console">07 / Gallery</p>
-
-                    <h2 id="capstone-gallery-title">Project gallery</h2>
-
-                    <p class="capstone-gallery-text">
-                        [PLACEHOLDER] Add photographs and screenshots showing
-                        the development, components, testing, prototype, and
-                        final system.
-                    </p>
-
-                    <div class="capstone-gallery-list">
-                        <article class="capstone-gallery-card">
-                            <p class="capstone-console">01</p>
-
-                            <img
-                                src="images/capstone/gallery-01.jpg"
-                                alt="[PLACEHOLDER — Gallery image description]"
-                                onclick="openCapstoneGallery(this)" />
-
-                            <h3 class="capstone-gallery-title">
-                                [IMAGE TITLE]
-                            </h3>
-
-                            <p class="capstone-gallery-caption">
-                                [PLACEHOLDER — Image description.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-gallery-card">
-                            <p class="capstone-console">02</p>
-
-                            <img
-                                src="images/capstone/gallery-02.jpg"
-                                alt="[PLACEHOLDER — Gallery image description]"
-                                onclick="openCapstoneGallery(this)" />
-
-                            <h3 class="capstone-gallery-title">
-                                [IMAGE TITLE]
-                            </h3>
-
-                            <p class="capstone-gallery-caption">
-                                [PLACEHOLDER — Image description.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-gallery-card">
-                            <p class="capstone-console">03</p>
-
-                            <img
-                                src="images/capstone/gallery-03.jpg"
-                                alt="[PLACEHOLDER — Gallery image description]"
-                                onclick="openCapstoneGallery(this)" />
-
-                            <h3 class="capstone-gallery-title">
-                                [IMAGE TITLE]
-                            </h3>
-
-                            <p class="capstone-gallery-caption">
-                                [PLACEHOLDER — Image description.]
-                            </p>
-                        </article>
-
-                        <article class="capstone-gallery-card">
-                            <p class="capstone-console">04</p>
-
-                            <img
-                                src="images/capstone/gallery-04.jpg"
-                                alt="[PLACEHOLDER — Gallery image description]"
-                                onclick="openCapstoneGallery(this)" />
-
-                            <h3 class="capstone-gallery-title">
-                                [IMAGE TITLE]
-                            </h3>
-
-                            <p class="capstone-gallery-caption">
-                                [PLACEHOLDER — Image description.]
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- contact section -->
-
-            <section id="capstone-contact">
-                <div class="capstone-contact-wrapper">
-                    <p class="capstone-console">08 / Contact</p>
-
-                    <h2 id="capstone-contact-title">
-                        Interested in the project?
-                    </h2>
-
-                    <article class="capstone-contact-card">
-                        <p class="capstone-contact-text">
-                            [PLACEHOLDER] Add a short closing statement about
-                            the project and invite visitors to learn more about
-                            your work.
-                        </p>
-
-                        <ul class="capstone-contact-list">
-                            <li>
-                                <a
-                                    href="#"
-                                    class="capstone-contact-item">
-                                    <img
-                                        src="images/icons/mail-text-primary.png"
-                                        width="24"
-                                        alt="Email Icon" />
-
-                                    [EMAIL]
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    class="capstone-contact-item">
-                                    <img
-                                        src="images/icons/github-sign-text-primary.png"
-                                        width="24"
-                                        alt="Github Icon" />
-
-                                    [GITHUB]
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    class="capstone-contact-item">
-                                    <img
-                                        src="images/icons/linkedin-text-primary.png"
-                                        width="24"
-                                        alt="LinkedIn Icon" />
-
-                                    [LINKEDIN]
-                                </a>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="capstone-footer-wrapper">
-                <div class="capstone-footer-title">
-                    <a
-                        href="#"
-                        class="capstone-logo">
-                        SP<span>.</span>
-                    </a>
-
-                    <p class="capstone-footer-text">
-                        [PLACEHOLDER] Thank you for checking out my capstone
-                        project.
-                    </p>
-                </div>
-
-                <div class="capstone-footer-links">
-                    <a href="#capstone-about"> About </a>
-
-                    <a href="#capstone-system"> System </a>
-
-                    <a href="#capstone-gallery"> Gallery </a>
-
-                    <a href="#capstone-contact"> Contact </a>
-                </div>
-
-                <a
-                    href="#"
-                    class="capstone-footer-backtop">
-                    Back to top ↑
-                </a>
-            </div>
-
-            <div class="capstone-footer-description">
-                <p class="capstone-footer-text">
-                    &copy;
-
-                    <span id="capstone-current-year"> yyyy </span>
-
-                    Sebastian B. Pambuan. All rights reserved.
+            <!-- 03.3 Team Contributions -->
+            <div class="development-team">
+                <p class="console">03.3 / Team Contributions</p>
+                <h3 class="development-subtitle">Six Members. One System.</h3>
+
+                <p class="development-text">
+                    Each member contributed to the planning, development,
+                    documentation, or physical construction of the capstone
+                    system.
                 </p>
 
-                <p class="capstone-footer-text">Capstone Project</p>
+                <div class="development-grid">
+                    <article class="member-card">
+                        <p class="console">Member 01</p>
+                        <h4 class="member-name">Sebastian B. Pambuan</h4>
+                        <p class="member-role">
+                            Arduino and Sensor Integration
+                        </p>
+                        <p class="member-text">
+                            Focused on hardware assembly, Arduino programming,
+                            bottle detection logic, sensor testing, and system
+                            integration.
+                        </p>
+                    </article>
+
+                    <article class="member-card">
+                        <p class="console">Member 02</p>
+                        <h4 class="member-name">Michaella Angela T. Ruiz</h4>
+                        <p class="member-role">
+                            Project Coordination and Documentation
+                        </p>
+                        <p class="member-text">
+                            Coordinated team activities, organized assignments,
+                            handled much of the project documentation, and
+                            contributed to the dashboard.
+                        </p>
+                    </article>
+
+                    <article class="member-card">
+                        <p class="console">Member 03</p>
+                        <h4 class="member-name">Melvin James S. Mico</h4>
+                        <p class="member-role">
+                            Dashboard and Physical Prototype
+                        </p>
+                        <p class="member-text">
+                            Contributed to dashboard development and the
+                            construction of the system's physical enclosure.
+                        </p>
+                    </article>
+
+                    <article class="member-card">
+                        <p class="console">Member 04</p>
+                        <h4 class="member-name">John Lloyd A. Pacheco</h4>
+                        <p class="member-role">
+                            Physical Prototype Construction
+                        </p>
+                        <p class="member-text">
+                            Contributed to the construction and assembly of the
+                            physical enclosure for the system.
+                        </p>
+                    </article>
+
+                    <article class="member-card">
+                        <p class="console">Member 05</p>
+                        <h4 class="member-name">Joel Jr. A. Satur</h4>
+                        <p class="member-role">System Case Construction</p>
+                        <p class="member-text">
+                            Contributed to constructing the case that houses and
+                            supports the system's physical components.
+                        </p>
+                    </article>
+
+                    <article class="member-card">
+                        <p class="console">Member 06</p>
+                        <h4 class="member-name">Mark Oliver E. Velasco</h4>
+                        <p class="member-role">
+                            Documentation and Dashboard Assistance
+                        </p>
+                        <p class="member-text">
+                            Assisted with project documentation and contributed
+                            code to the dashboard.
+                        </p>
+                    </article>
+                </div>
             </div>
-        </footer>
-
-        <!-- gallery image modal -->
-
-        <div
-            id="capstone-gallery-modal"
-            class="capstone-gallery-modal"
-            onclick="closeCapstoneGallery(event)">
-            <button
-                class="capstone-gallery-close"
-                onclick="closeCapstoneGallery(event)"
-                aria-label="Close project image preview">
-                &times;
-            </button>
-
-            <img
-                id="capstone-gallery-full"
-                class="capstone-gallery-full"
-                src=""
-                alt="Full project image" />
         </div>
+    </section>
 
-        <script src="capstone-script.js"></script>
-    </body>
-</html>
+    <!-- Results and Evaluation section -->
+    <section id="result">
+        <div class="result-wrapper">
+            <p class="console">04 / Results</p>
+            <h2 id="result-title">Testing and Evaluation</h2>
+
+            <p class="result-intro">
+                The completed prototype was evaluated to examine its core
+                functions and gather feedback on the proposed system. Testing
+                covered the interaction between the hardware and software, while
+                the survey explored respondents' environmental awareness and
+                perception of the system.
+            </p>
+
+            <div class="result-list">
+                <!-- 04.1 Functional Testing -->
+                <article class="result-card">
+                    <p class="console">04.1 / System Testing</p>
+                    <h3 class="result-header">Prototype Functionality</h3>
+
+                    <p class="result-status">Reported: Pass</p>
+
+                    <p class="result-text">
+                        The manuscript reports that the prototype was tested
+                        against software quality criteria based on ISO 25010.
+                        The evaluation covered functional suitability,
+                        performance efficiency, usability, reliability,
+                        security, maintainability, compatibility, and data
+                        accuracy.
+                    </p>
+
+                    <p class="result-text">
+                        The reported tests indicated that the system could
+                        detect and validate bottles, activate the charging
+                        reward, record transaction data, and connect the
+                        hardware with the software components.
+                    </p>
+                </article>
+
+                <!-- 04.2 Survey Evaluation -->
+                <article class="result-card">
+                    <p class="console">04.2 / User Feedback</p>
+                    <h3 class="result-header">Environmental Awareness</h3>
+
+                    <div class="result-stat">
+                        <span class="result-number">3.47–3.64</span>
+                        <span class="result-label"> Mean rating </span>
+                    </div>
+
+                    <p class="result-text">
+                        Among the 100 respondents, environmental awareness
+                        indicators received mean scores ranging from 3.47 to
+                        3.64, interpreted in the manuscript as "Strongly Agree."
+                        The results indicate strong awareness of environmental
+                        issues and support for responsible waste disposal.
+                    </p>
+                </article>
+
+                <!-- 04.3 System Perception -->
+                <article class="result-card">
+                    <p class="console">04.3 / System Perception</p>
+                    <h3 class="result-header">
+                        Positive Response to the Proposed System
+                    </h3>
+
+                    <div class="result-stat">
+                        <span class="result-number">3.35–3.58</span>
+                        <span class="result-label"> Mean rating </span>
+                    </div>
+
+                    <p class="result-text">
+                        Respondents' assessment of the proposed system produced
+                        mean scores ranging from 3.35 to 3.58, also interpreted
+                        as "Strongly Agree." Responses reflected positive views
+                        about the use of phone charging rewards to encourage
+                        proper plastic bottle disposal.
+                    </p>
+                </article>
+
+                <!-- 04.4 Improvements -->
+                <article class="result-card">
+                    <p class="console">04.4 / Areas for Improvement</p>
+                    <h3 class="result-header">Refinement After Testing</h3>
+
+                    <p class="result-text">
+                        The manuscript also notes occasional refreshes when
+                        retrieving data and includes feedback recommending
+                        improvements to the dashboard's appearance and user
+                        experience. These observations identify areas that could
+                        be refined in future iterations.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery section -->
+    <section id="gallery">
+        <div class="gallery-wrapper">
+            <p class="console">05 / Gallery</p>
+            <h2 id="gallery-title">Project in Pictures</h2>
+
+            <p class="gallery-intro">
+                A collection of photos documenting the prototype, hardware
+                assembly, development process, and final capstone presentation.
+            </p>
+
+            <div class="gallery-grid">
+                <!-- Gallery image 1 -->
+                <figure class="gallery-item">
+                    <img
+                        src="images/projects/system_view1.jpg"
+                        alt="Smart plastic bottle disposal system prototype"
+                        loading="lazy"
+                        onclick="openGallery(this)" />
+                    <figcaption>
+                        <span class="console">05.1</span>
+                        <span class="gallery-caption">
+                            Final System Prototype
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Gallery image 2 -->
+                <figure class="gallery-item">
+                    <img
+                        src="images/projects/system_view2.jpg"
+                        alt="Smart plastic bottle disposal system prototype"
+                        loading="lazy"
+                        onclick="openGallery(this)" />
+                    <figcaption>
+                        <span class="console">05.2</span>
+                        <span class="gallery-caption">
+                            Final System Prototype
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Gallery image 3 -->
+                <figure class="gallery-item">
+                    <img
+                        src="images/projects/group_photo_adviser.jpg"
+                        alt="Group Photo with Adviser"
+                        loading="lazy"
+                        onclick="openGallery(this)" />
+                    <figcaption>
+                        <span class="console">05.3</span>
+                        <span class="gallery-caption">
+                            Group Picture with our Adviser
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Gallery image 4 -->
+                <figure class="gallery-item">
+                    <img
+                        src="images/projects/group_photo_judges.jpg"
+                        alt="Group Photo with Judges"
+                        loading="lazy"
+                        onclick="openGallery(this)" />
+                    <figcaption>
+                        <span class="console">05.4</span>
+                        <span class="gallery-caption">
+                            Group Picture with the Judges
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Gallery image 5 -->
+                <figure class="gallery-item">
+                    <img
+                        src="images/projects/dashboard.png"
+                        alt="Web-based administrative dashboard"
+                        loading="lazy"
+                        onclick="openGallery(this)" />
+                    <figcaption>
+                        <span class="console">05.5</span>
+                        <span class="gallery-caption"> Admin Dashboard </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Gallery image 6 -->
+                <figure class="gallery-item">
+                    <img
+                        src="images/projects/system_inards.jpg"
+                        alt="System insides"
+                        loading="lazy"
+                        onclick="openGallery(this)" />
+                    <figcaption>
+                        <span class="console">05.6</span>
+                        <span class="gallery-caption">
+                            What the inside looked like (before the insert
+                            section)
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Gallery image 7 -->
+                <figure class="gallery-item">
+                    <img
+                        src="images/projects/building_system.jpg"
+                        alt="Building the case"
+                        loading="lazy"
+                        onclick="openGallery(this)" />
+                    <figcaption>
+                        <span class="console">05.7</span>
+                        <span class="gallery-caption">
+                            Building of the system case
+                        </span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+</main>
