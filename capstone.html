@@ -117,43 +117,40 @@
                 <div class="overview-wrapper">
                     <p class="console">01 / Overview</p>
                     <h2 id="overview-title">Project Overview</h2>
+
                     <div class="overview-grid">
                         <figure class="overview-profile">
                             <img
                                 src="images/projects/system_view1.jpg"
                                 width="300"
-                                alt="Profile image of Sebastian Pambuan" />
+                                alt="Smart Plastic Bottle Disposal System prototype" />
                         </figure>
+
                         <div class="overview-description">
                             <p class="overview-text">
-                                The Development of a Smart Plastic Bottle
-                                Disposal System with Phone Charging Rewards for
-                                City of Malabon University aims to address
-                                plastic bottle waste on campus by encouraging
-                                proper disposal through a technology-based
-                                solution. The project focuses on developing a
-                                smart disposal system that detects plastic
-                                bottle insertion and provides mobile phone
-                                charging time as a reward. By combining waste
-                                management with a practical incentive, the
-                                system aims to encourage students to participate
-                                in proper waste disposal and develop more
-                                environmentally responsible habits.
+                                Plastic bottle waste remains an environmental
+                                concern at the City of Malabon University (CMU),
+                                where traditional waste management practices
+                                have struggled to encourage consistent proper
+                                disposal. To address this problem, our
+                                six-member capstone team developed the Smart
+                                Plastic Bottle Disposal System with Phone
+                                Charging Rewards, a technology-based solution
+                                designed to encourage responsible disposal
+                                through a practical incentive.
                             </p>
+
                             <p class="overview-text">
-                                The project integrates hardware components,
-                                sensors, and embedded programming to automate
-                                bottle detection and connect the disposal
-                                process with the phone charging reward
-                                mechanism. It is designed to support the
-                                university’s environmental sustainability
-                                efforts while promoting the use of technology to
-                                address waste management challenges. Through
-                                this initiative, the project seeks to provide a
-                                practical and engaging approach to reducing
-                                improperly discarded plastic bottles and
-                                encouraging sustainable practices within the CMU
-                                community.
+                                The system uses an Arduino UNO, sensors, and a
+                                phone-charging mechanism to automate bottle
+                                detection and provide charging time for valid
+                                bottles. It also records disposal and charging
+                                activity for monitoring through a web-based
+                                interface. By combining embedded hardware,
+                                software, and an incentive-based approach, the
+                                project aims to promote environmental awareness
+                                and support more sustainable waste disposal
+                                practices within the university community.
                             </p>
                         </div>
                     </div>
@@ -164,176 +161,473 @@
             <section id="system">
                 <div class="system-wrapper">
                     <p class="console">02 / System</p>
-                    <h2 id="system-title">System Design</h2>
+                    <h2 id="system-title">How the System Works</h2>
 
                     <div class="system-list">
-                        <!-- 02.1 System Overview -->
+                        <!-- Step 1: Bottle Insertion -->
                         <article class="system-card">
                             <p class="console">02.1</p>
-                            <h3 class="system-header">System Overview</h3>
-
-                            <p class="system-text">
-                                The Smart Plastic Bottle Disposal System aims to
-                                encourage proper plastic bottle disposal at City
-                                of Malabon University by offering phone charging
-                                time as a reward. The system uses sensors to
-                                detect and evaluate inserted objects before
-                                accepting a bottle and granting the
-                                corresponding charging time. It combines
-                                Arduino-based hardware, embedded programming,
-                                and a monitoring dashboard to manage bottle
-                                detection, reward allocation, and system data.
-                                By connecting responsible waste disposal with a
-                                practical incentive, the project supports the
-                                university's environmental sustainability
-                                efforts.
-                            </p>
-                        </article>
-
-                        <!-- 02.2 Hardware Components -->
-                        <article class="system-card">
-                            <p class="console">02.2</p>
-                            <h3 class="system-header">Hardware Components</h3>
-
-                            <p class="system-text">
-                                The system uses an Arduino board to process
-                                sensor inputs and control the disposal and
-                                charging processes. IR sensors detect the
-                                presence and height of inserted objects, while a
-                                load cell measures their weight to help
-                                determine whether an object meets the bottle
-                                acceptance criteria. A capacitive proximity
-                                sensor helps identify metal objects, such as tin
-                                cans, for rejection.
-                            </p>
-
-                            <p class="system-text">
-                                The charging circuit includes a charging module,
-                                an INA219 current sensor, a step-down converter,
-                                and a relay module. These components support
-                                phone charging, monitor current consumption, and
-                                control the power supplied to the charging
-                                output. The disposal unit's physical structure
-                                and electronic housing hold the components in
-                                place and support the operation of the system.
-                            </p>
-                        </article>
-
-                        <!-- 02.3 Software and Control Logic -->
-                        <article class="system-card">
-                            <p class="console">02.3</p>
-                            <h3 class="system-header">
-                                Software and Control Logic
-                            </h3>
-
-                            <p class="system-text">
-                                The system uses C++ for the Arduino's embedded
-                                logic, while JavaScript and Node.js handle
-                                communication between the Arduino and a
-                                connected computer. PHP is used to develop the
-                                monitoring dashboard, which allows an
-                                administrator to view system data when a
-                                computer is connected to the system.
-                            </p>
-
-                            <p class="system-text">
-                                During bottle detection, the IR sensors detect
-                                the presence and height of an inserted object.
-                                The load cell measures its weight, and the
-                                capacitive proximity sensor helps identify metal
-                                objects. The system processes these sensor
-                                inputs to determine whether the object meets the
-                                acceptance criteria. Once a bottle is accepted,
-                                its data is recorded and the corresponding phone
-                                charging time is awarded.
-                            </p>
-
-                            <p class="system-text">
-                                The charging system uses an INA219 current
-                                sensor to monitor electrical current and
-                                determine whether a phone is drawing power. The
-                                reward timer runs while the system detects
-                                active charging and pauses when no charging
-                                current is detected. This allows the user to use
-                                the remaining charging time without consuming it
-                                when no phone is charging.
-                            </p>
-
-                            <p class="system-text">
-                                When the remaining charging time reaches zero,
-                                the Arduino controls a relay module to
-                                disconnect the power supplied to the step-down
-                                converter that provides the charging output.
-                                This prevents further charging through the
-                                system until additional charging time is
-                                available.
-                            </p>
-                        </article>
-
-                        <!-- 02.4 System Workflow -->
-                        <article class="system-card">
-                            <p class="console">02.4</p>
-                            <h3 class="system-header">System Workflow</h3>
+                            <h3 class="system-header">Bottle Insertion</h3>
 
                             <p class="system-text">
                                 The process begins when a user inserts a plastic
                                 bottle into the disposal unit. The system uses
-                                multiple sensors to evaluate the object's
-                                presence, height, weight, and possible metal
-                                content. If the object meets the system's
-                                acceptance criteria, the bottle is accepted, its
-                                data is recorded, and the corresponding phone
-                                charging time is awarded.
-                            </p>
-
-                            <p class="system-text">
-                                The user can then connect a phone to the
-                                charging output and use the available charging
-                                time. The INA219 monitors current consumption so
-                                the timer runs only while charging is detected.
-                                When no charging is detected, the timer pauses.
-                                Once the remaining time reaches zero, the relay
-                                disconnects the charging output, ending the
-                                reward cycle.
+                                an Arduino UNO microcontroller connected to
+                                sensors that detect the bottle and gather
+                                information needed for validation.
                             </p>
                         </article>
-                    </div>
-                </div>
-            </section>
 
-            <!-- System section -->
-            <section id="development">
-                <div class="system-wrapper">
-                    <p class="console">02 / Development</p>
-                    <h2 id="system-title"></h2>
-
-                    <div class="system-list">
-                        <!-- 02.1 System Overview -->
+                        <!-- Step 2: Bottle Detection and Validation -->
                         <article class="system-card">
-                            <p class="console">02.1</p>
-                            <h3 class="system-header"></h3>
-                            <p class="console">hello</p>
+                            <p class="console">02.2</p>
+                            <h3 class="system-header">
+                                Detection and Validation
+                            </h3>
+
                             <p class="system-text">
-                                The Smart Plastic Bottle Disposal System aims to
-                                encourage proper plastic bottle disposal at City
-                                of Malabon University by offering phone charging
-                                time as a reward. The system uses sensors to
-                                detect and evaluate inserted objects before
-                                accepting a bottle and granting the
-                                corresponding charging time. It combines
-                                Arduino-based hardware, embedded programming,
-                                and a monitoring dashboard to manage bottle
-                                detection, reward allocation, and system data.
-                                By connecting responsible waste disposal with a
-                                practical incentive, the project supports the
-                                university's environmental sustainability
-                                efforts.
+                                The IR sensor, ultrasonic sensor, load cell, and
+                                CP sensor provide readings related to the
+                                bottle's presence, size, weight, and material.
+                                The system checks whether the inserted bottle
+                                meets its predefined requirements. If the bottle
+                                is invalid or no bottle is detected, the user is
+                                prompted to try again.
+                            </p>
+                        </article>
+
+                        <!-- Step 3: Charging Reward -->
+                        <article class="system-card">
+                            <p class="console">02.3</p>
+                            <h3 class="system-header">Phone Charging Reward</h3>
+
+                            <p class="system-text">
+                                Once a valid bottle is accepted, the system
+                                calculates the corresponding phone charging time
+                                using its configured reward mechanism. The relay
+                                module activates the charging outlet, allowing
+                                the user to receive the reward for proper bottle
+                                disposal.
+                            </p>
+                        </article>
+
+                        <!-- Step 4: Data Recording and Monitoring -->
+                        <article class="system-card">
+                            <p class="console">02.4</p>
+                            <h3 class="system-header">
+                                Data Recording and Monitoring
+                            </h3>
+
+                            <p class="system-text">
+                                Bottle deposits and charging sessions are
+                                recorded in the database for tracking and
+                                reporting. The web-based admin dashboard allows
+                                administrators to monitor disposal records,
+                                charging activity, and system statistics. After
+                                the process is completed, the system resets and
+                                is ready for the next user.
                             </p>
                         </article>
                     </div>
                 </div>
             </section>
 
+            <!-- Development section -->
+            <section id="development">
+                <div class="development-wrapper">
+                    <p class="console">03 / Development</p>
+                    <h2 id="development-title">Built Through Collaboration</h2>
+
+                    <p class="development-intro">
+                        The project was developed using the Agile Development
+                        Model, with hardware, programming, interface design, and
+                        testing handled through a collaborative process. Each
+                        team member contributed to different parts of the
+                        system, from the physical prototype to its software and
+                        documentation.
+                    </p>
+
+                    <div class="development-list">
+                        <!-- 03.1 Personal Contribution -->
+                        <article class="development-card">
+                            <p class="console">03.1 / My Contribution</p>
+                            <h3 class="development-header">
+                                Arduino and Sensor Integration
+                            </h3>
+
+                            <p class="development-text">
+                                My main contribution focused on the system's
+                                Arduino-based hardware. I helped design and
+                                assemble the electronic components, including
+                                the Arduino board, wiring, and sensors. I also
+                                developed the embedded logic for bottle
+                                detection and insertion, tested the hardware's
+                                behavior, and worked on integrating the Arduino
+                                with the wider system.
+                            </p>
+
+                            <ul class="development-skills">
+                                <li>Arduino Programming</li>
+                                <li>Sensor Integration</li>
+                                <li>Hardware Assembly</li>
+                                <li>Testing and Debugging</li>
+                            </ul>
+                        </article>
+
+                        <!-- 03.2 Development Approach -->
+                        <article class="development-card">
+                            <p class="console">03.2 / Development Approach</p>
+                            <h3 class="development-header">
+                                Iterative Development and Testing
+                            </h3>
+
+                            <p class="development-text">
+                                The team followed the Agile Development Model,
+                                building the system in stages instead of
+                                completing every component at once. Hardware
+                                components, embedded logic, and software
+                                functions were developed and tested
+                                incrementally. This approach helped the team
+                                identify issues, check how components worked
+                                together, and make adjustments throughout
+                                development.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- 03.3 Team Contributions -->
+                    <div class="development-team">
+                        <p class="console">03.3 / Team Contributions</p>
+                        <h3 class="development-subtitle">
+                            Six Members. One System.
+                        </h3>
+
+                        <p class="development-text">
+                            Each member contributed to the planning,
+                            development, documentation, or physical construction
+                            of the capstone system.
+                        </p>
+
+                        <div class="development-grid">
+                            <article class="member-card">
+                                <p class="console">Member 01</p>
+                                <h4 class="member-name">
+                                    Sebastian B. Pambuan
+                                </h4>
+                                <p class="member-role">
+                                    Arduino and Sensor Integration
+                                </p>
+                                <p class="member-text">
+                                    Focused on hardware assembly, Arduino
+                                    programming, bottle detection logic, sensor
+                                    testing, and system integration.
+                                </p>
+                            </article>
+
+                            <article class="member-card">
+                                <p class="console">Member 02</p>
+                                <h4 class="member-name">
+                                    Michaella Angela T. Ruiz
+                                </h4>
+                                <p class="member-role">
+                                    Project Coordination and Documentation
+                                </p>
+                                <p class="member-text">
+                                    Coordinated team activities, organized
+                                    assignments, handled much of the project
+                                    documentation, and contributed to the
+                                    dashboard.
+                                </p>
+                            </article>
+
+                            <article class="member-card">
+                                <p class="console">Member 03</p>
+                                <h4 class="member-name">
+                                    Melvin James S. Mico
+                                </h4>
+                                <p class="member-role">
+                                    Dashboard and Physical Prototype
+                                </p>
+                                <p class="member-text">
+                                    Contributed to dashboard development and the
+                                    construction of the system's physical
+                                    enclosure.
+                                </p>
+                            </article>
+
+                            <article class="member-card">
+                                <p class="console">Member 04</p>
+                                <h4 class="member-name">
+                                    John Lloyd A. Pacheco
+                                </h4>
+                                <p class="member-role">
+                                    Physical Prototype Construction
+                                </p>
+                                <p class="member-text">
+                                    Contributed to the construction and assembly
+                                    of the physical enclosure for the system.
+                                </p>
+                            </article>
+
+                            <article class="member-card">
+                                <p class="console">Member 05</p>
+                                <h4 class="member-name">Joel Jr. A. Satur</h4>
+                                <p class="member-role">
+                                    System Case Construction
+                                </p>
+                                <p class="member-text">
+                                    Contributed to constructing the case that
+                                    houses and supports the system's physical
+                                    components.
+                                </p>
+                            </article>
+
+                            <article class="member-card">
+                                <p class="console">Member 06</p>
+                                <h4 class="member-name">
+                                    Mark Oliver E. Velasco
+                                </h4>
+                                <p class="member-role">
+                                    Documentation and Dashboard Assistance
+                                </p>
+                                <p class="member-text">
+                                    Assisted with project documentation and
+                                    contributed code to the dashboard.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results and Evaluation section -->
+            <section id="result">
+                <div class="result-wrapper">
+                    <p class="console">04 / Results</p>
+                    <h2 id="result-title">Testing and Evaluation</h2>
+
+                    <p class="result-intro">
+                        The completed prototype was evaluated to examine its
+                        core functions and gather feedback on the proposed
+                        system. Testing covered the interaction between the
+                        hardware and software, while the survey explored
+                        respondents' environmental awareness and perception of
+                        the system.
+                    </p>
+
+                    <div class="result-list">
+                        <!-- 04.1 Functional Testing -->
+                        <article class="result-card">
+                            <p class="console">04.1 / System Testing</p>
+                            <h3 class="result-header">
+                                Prototype Functionality
+                            </h3>
+
+                            <p class="result-status">Reported: Pass</p>
+
+                            <p class="result-text">
+                                The manuscript reports that the prototype was
+                                tested against software quality criteria based
+                                on ISO 25010. The evaluation covered functional
+                                suitability, performance efficiency, usability,
+                                reliability, security, maintainability,
+                                compatibility, and data accuracy.
+                            </p>
+
+                            <p class="result-text">
+                                The reported tests indicated that the system
+                                could detect and validate bottles, activate the
+                                charging reward, record transaction data, and
+                                connect the hardware with the software
+                                components.
+                            </p>
+                        </article>
+
+                        <!-- 04.2 Survey Evaluation -->
+                        <article class="result-card">
+                            <p class="console">04.2 / User Feedback</p>
+                            <h3 class="result-header">
+                                Environmental Awareness
+                            </h3>
+
+                            <div class="result-stat">
+                                <span class="result-number">3.47–3.64</span>
+                                <span class="result-label"> Mean rating </span>
+                            </div>
+
+                            <p class="result-text">
+                                Among the 100 respondents, environmental
+                                awareness indicators received mean scores
+                                ranging from 3.47 to 3.64, interpreted in the
+                                manuscript as "Strongly Agree." The results
+                                indicate strong awareness of environmental
+                                issues and support for responsible waste
+                                disposal.
+                            </p>
+                        </article>
+
+                        <!-- 04.3 System Perception -->
+                        <article class="result-card">
+                            <p class="console">04.3 / System Perception</p>
+                            <h3 class="result-header">
+                                Positive Response to the Proposed System
+                            </h3>
+
+                            <div class="result-stat">
+                                <span class="result-number">3.35–3.58</span>
+                                <span class="result-label"> Mean rating </span>
+                            </div>
+
+                            <p class="result-text">
+                                Respondents' assessment of the proposed system
+                                produced mean scores ranging from 3.35 to 3.58,
+                                also interpreted as "Strongly Agree." Responses
+                                reflected positive views about the use of phone
+                                charging rewards to encourage proper plastic
+                                bottle disposal.
+                            </p>
+                        </article>
+
+                        <!-- 04.4 Improvements -->
+                        <article class="result-card">
+                            <p class="console">04.4 / Areas for Improvement</p>
+                            <h3 class="result-header">
+                                Refinement After Testing
+                            </h3>
+
+                            <p class="result-text">
+                                The manuscript also notes occasional refreshes
+                                when retrieving data and includes feedback
+                                recommending improvements to the dashboard's
+                                appearance and user experience. These
+                                observations identify areas that could be
+                                refined in future iterations.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Gallery section -->
+            <section id="gallery">
+                <div class="gallery-wrapper">
+                    <p class="console">05 / Gallery</p>
+                    <h2 id="gallery-title">Project in Pictures</h2>
+
+                    <p class="gallery-intro">
+                        A collection of photos documenting the prototype,
+                        hardware assembly, development process, and final
+                        capstone presentation.
+                    </p>
+
+                    <div class="gallery-grid">
+                        <!-- Gallery image 1 -->
+                        <figure class="gallery-item">
+                            <img
+                                src="images/projects/system_view1.jpg"
+                                alt="Smart plastic bottle disposal system prototype"
+                                loading="lazy"
+                                onclick="openGallery(this)" />
+                            <figcaption>
+                                <span class="console">05.1</span>
+                                <span class="gallery-caption">
+                                    Final System Prototype
+                                </span>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Gallery image 2 -->
+                        <figure class="gallery-item">
+                            <img
+                                src="images/projects/system_view2.jpg"
+                                alt="Smart plastic bottle disposal system prototype"
+                                loading="lazy"
+                                onclick="openGallery(this)" />
+                            <figcaption>
+                                <span class="console">05.2</span>
+                                <span class="gallery-caption">
+                                    Final System Prototype
+                                </span>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Gallery image 3 -->
+                        <figure class="gallery-item">
+                            <img
+                                src="images/projects/group_photo_adviser.jpg"
+                                alt="Group Photo with Adviser"
+                                loading="lazy"
+                                onclick="openGallery(this)" />
+                            <figcaption>
+                                <span class="console">05.3</span>
+                                <span class="gallery-caption">
+                                    Group Picture with our Adviser
+                                </span>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Gallery image 4 -->
+                        <figure class="gallery-item">
+                            <img
+                                src="images/projects/group_photo_judges.jpg"
+                                alt="Group Photo with Judges"
+                                loading="lazy"
+                                onclick="openGallery(this)" />
+                            <figcaption>
+                                <span class="console">05.4</span>
+                                <span class="gallery-caption">
+                                    Group Picture with the Judges
+                                </span>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Gallery image 5 -->
+                        <figure class="gallery-item">
+                            <img
+                                src="images/projects/dashboard.png"
+                                alt="Web-based administrative dashboard"
+                                loading="lazy"
+                                onclick="openGallery(this)" />
+                            <figcaption>
+                                <span class="console">05.5</span>
+                                <span class="gallery-caption">
+                                    Admin Dashboard
+                                </span>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Gallery image 6 -->
+                        <figure class="gallery-item">
+                            <img
+                                src="images/projects/system_inards.jpg"
+                                alt="System insides"
+                                loading="lazy"
+                                onclick="openGallery(this)" />
+                            <figcaption>
+                                <span class="console">05.6</span>
+                                <span class="gallery-caption">
+                                    What the inside looked like (before the insert section)
+                                </span>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Gallery image 7 -->
+                        <figure class="gallery-item">
+                            <img
+                                src="images/projects/building_system.jpg"
+                                alt="Building the case"
+                                loading="lazy"
+                                onclick="openGallery(this)" />
+                            <figcaption>
+                                <span class="console">05.7</span>
+                                <span class="gallery-caption">
+                                    Building of the system case
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -384,22 +678,23 @@
             </div>
         </footer>
 
+        <!-- Gallery Image Modal -->
         <div
-            id="certificate-modal"
+            id="gallery-modal"
             class="certificate-modal"
-            onclick="closeCertificate(event)">
-            <button
+            onclick="closeGallery(event)">
+            <span
                 class="certificate-close"
-                onclick="closeCertificate(event)"
-                aria-label="Close certificate preview">
-                &times;
-            </button>
+                onclick="closeGallery(event)"
+                aria-label="Close gallery image"
+                >&times;</span
+            >
 
             <img
-                id="certificate-full"
+                id="gallery-full"
                 class="certificate-full"
                 src=""
-                alt="Full certificate" />
+                alt="" />
         </div>
 
         <script src="script.js"></script>

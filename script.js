@@ -57,3 +57,22 @@ function closeCertificate(event) {
         document.getElementById("certificate-modal").style.display = "none";
     }
 }
+
+function openGallery(image) {
+    const modal = document.getElementById("gallery-modal");
+    const fullImage = document.getElementById("gallery-full");
+
+    fullImage.src = image.src;
+    fullImage.alt = image.alt;
+
+    modal.style.display = "flex";
+}
+
+function closeGallery(event) {
+    if (
+        event.target.id === "gallery-modal" ||
+        event.target.classList.contains("certificate-close")
+    ) {
+        document.getElementById("gallery-modal").style.display = "none";
+    }
+}
