@@ -1,19 +1,15 @@
 :root {
-    --bg-primary: #06050c;
-    --bg-secondary: #0d0a16;
-    --bg-card: #151021;
+    --bg-primary: #08060e;
+    --bg-secondary: #100b1b;
+    --bg-card: #1b122b;
     --primary: #00ff9c;
-    --primary-dark: #00b873;
-    --accent: #d600ff;
-    --text-primary: #f5fff9;
-    --text-secondary: #9891a8;
-    --border: #34204a;
+    --primary-dark: #00b875;
+    --text-primary: #f4edff;
+    --text-secondary: #a49ab8;
+    --border: #39254f;
     --glow: rgba(0, 255, 156, 0.2);
-    --success: #00ff9c;
-    --warning: #ffd000;
-    --danger: #ff1768;
-    --white: #ffffff;
-    --black: #000000;
+    --white: #f1f1f1;
+    --black: #090909;
 }
 
 /* reset */
@@ -155,6 +151,7 @@ header {
 .navbar a:hover,
 .mobile-navbar a:hover {
     color: var(--primary);
+    background-image: linear-gradient(90deg, #39254f73, #39254f00);
 }
 
 .navbar a:hover::before,
@@ -348,6 +345,7 @@ section h2::after {
     color: var(--primary);
     border-color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #39254f79, #0403067c);
 }
 
 .hero-wrapper::before {
@@ -388,6 +386,7 @@ section h2::after {
 #about figure:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #39254f79, #0403067c);
 }
 
 .about-text {
@@ -416,6 +415,7 @@ section h2::after {
     color: var(--primary);
     border-color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(90deg, #39254f79, #0403067c);
 }
 
 /* skills section */
@@ -460,6 +460,7 @@ section h2::after {
     border-color: var(--primary);
     color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #39254f79, #0403067c);
 }
 
 /* projects section */
@@ -489,6 +490,7 @@ section h2::after {
 .system-card:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #39254f79, #0403067c);
 }
 
 .project-title,
@@ -531,6 +533,7 @@ section h2::after {
 .certificate-link:hover {
     color: var(--primary);
     border-color: var(--primary);
+    background-image: linear-gradient(90deg, #39254f79, #0403067c);
 }
 
 /* experience section */
@@ -621,6 +624,7 @@ section h2::after {
     border-color: var(--primary);
     color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(90deg, #39254f79, #0403067c);
 }
 
 .project-card > img,
@@ -671,6 +675,7 @@ section h2::after {
 #overview figure:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #39254f79, #0403067c);
 }
 
 .overview-text {
@@ -725,6 +730,7 @@ section h2::after {
 .member-card:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #39254f79, #0403067c);
 }
 
 .development-header,
@@ -856,6 +862,7 @@ section h2::after {
 .gallery-item:hover {
     border-color: var(--primary);
     transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #39254f79, #0403067c);
 }
 
 .gallery-item img {
@@ -921,12 +928,13 @@ footer {
 
 .footer-links a {
     position: relative;
+    padding: 8px 12px;
     color: var(--text-secondary);
     font-family: "Courier New", monospace;
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     transition: all 0.2s ease;
 }
 
@@ -935,14 +943,14 @@ footer {
     margin-right: 6px;
     color: var(--primary-dark);
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: opacity 0.25s ease;
 }
 
 .footer-links a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -7px;
+    bottom: 1px;
     width: 0;
     height: 2px;
     background: var(--primary);
@@ -951,6 +959,7 @@ footer {
 
 .footer-links a:hover {
     color: var(--primary);
+    background-image: linear-gradient(90deg, #39254f79, #0403067c);
 }
 
 .footer-links a:hover::before {
@@ -978,6 +987,7 @@ footer {
 .footer-backtop:hover {
     color: var(--primary);
     border-color: var(--primary);
+    background-image: linear-gradient(90deg, #39254f79, #0403067c);
 }
 
 .footer-description {
